@@ -1,0 +1,8 @@
+@mixin can-you-feel-the-love-tonight {
+    background: linear-gradient(90deg, #4568DC -12.23%, #B06AB3 129.26%);
+}
+@mixin can-you-feel-the-love-tonight-text {
+    @include can-you-feel-the-love-tonight;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

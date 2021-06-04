@@ -1,28 +1,85 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="background-void"/>
+    <Ahoj/>
+    <Welcome/>
+
+    <About v-bind:internships="internships"/>
+    <Portfolio/>
+
+    <Ending/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import About from './components/About.vue';
+import Ahoj from './components/Ahoj.vue';
+import Welcome from './components/Welcome.vue';
+import Ending from './components/Ending.vue';
+import Portfolio from './components/Portfolio.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      internships: [
+        {
+          name: 'IntegraSources',
+          href: 'https://integrasources.com',
+        },
+        {
+          name: 'Alawar',
+          href: 'https://company.alawar.com/en/',
+        },
+        {
+          name: 'Sibirix',
+          href: 'https://sibirix.com',
+        },
+      ],
+    };
+  },
   components: {
-    HelloWorld,
+    Ahoj,
+    Welcome,
+    About,
+    Ending,
+    Portfolio,
   },
 };
 </script>
 
 <style lang="scss">
+@import './scss/mixins.scss';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #e2e2e2;
+}
+.background-void {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: fixed;
+  background-color: #252525;
+  z-index: -1;
+  &:before{
+    z-index: 1;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: '';
+    background-image: url('./assets/sky_seamless.png');
+    background-blend-mode: lighten;
+    opacity: 35%;
+  }
+}
+.can-you-feel-the-love-tonight {
+  @include can-you-feel-the-love-tonight-text;
 }
 </style>
