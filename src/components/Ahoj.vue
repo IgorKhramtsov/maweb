@@ -27,18 +27,18 @@ export default {
     font-weight: normal;
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 8px;
+    // margin-bottom: 3px;
     ~.small {
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
-      line-height: 28px;
+      // line-height: 28px;
     }
     ~.smallest {
       font-style: normal;
       font-weight: 300;
       font-size: 22px;
-      line-height: 26px;
+      // line-height: 26px;
     }
   }
 }

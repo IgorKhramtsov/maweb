@@ -1,7 +1,7 @@
 <template>
   <section class='about container'>
     <div class="row">
-      <p>start coding at 15, made a few personal projects,
+      <p>started coding at 15, made a few personal projects,
         <br>and successfully get the Bachelor’s degree.
       </p>
     </div>
@@ -24,7 +24,7 @@
           <li>native and flutter mobile development</li>
           <li>backend development</li>
           <li>openCV</li>
-          <li>firbase</li>
+          <li>firebase</li>
         </ul>
       </div>
     </div>

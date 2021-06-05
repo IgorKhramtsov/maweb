@@ -15,7 +15,7 @@ export default {
 section {
     position: relative;
     display: block;
-    padding-top: 80px;
+    padding-top: 200px;
     padding-bottom: 40px;
 }
 span {
