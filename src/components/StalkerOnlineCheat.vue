@@ -1,3 +1,5 @@
+// TODO: rewrite slider
+
 <template>
   <div class="row text">
       <p class="col-md-8">
@@ -102,13 +104,7 @@ export default {
   width: auto;
   padding: 12px;
   padding-bottom: 16px;
-  // padding-top: 6px;
   margin: 25px 0;
-  // background: linear-gradient(
-  //   180deg,
-  //   rgba(55, 59, 68, 0.6) -5.1%,
-  //   rgba(66, 134, 244, 0.102) 109.05%
-  // );
   border-radius: 6px;
   .macoswindow {
     .content {
@@ -120,15 +116,15 @@ export default {
     .header {
       position: relative;
       background-color: #292929;
-      padding: 8px 0px;
+      padding: 2px 0px;
       padding-left: 8px;
       border-radius: 8px 8px 0 0;
       border: 1.5px solid #666666;
       border-bottom: none;
       .circle {
-        width: 20px;
-        height: 20px;
-        border-radius: 20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
         background-color: red;
         display: inline-block;
         margin: 0 4px;
@@ -142,6 +138,7 @@ export default {
         left: 0;
         color: #9e9e9e;
         font-weight: normal;
+        font-size: 18px;
         // top: 0;
       }
     }
