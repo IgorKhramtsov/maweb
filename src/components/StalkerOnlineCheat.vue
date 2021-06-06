@@ -19,20 +19,12 @@
         with cheat engine. <br>
       </p>
       <div class="photoframe">
-        <div class="macoswindow">
-          <div class="header">
-            <div class="circle" style="background-color: #fc5b57"/>
-            <div class="circle" style="background-color: #e5bf3c"/>
-            <div class="circle" style="background-color: #57c038"/>
-            <span class="title">second version of SZOHack</span>
-          </div>
-          <div class="content">
-            <img
-              :src="getImgUrl(szohack_v2.images[szohack_v2.selected_image])"
-              alt="second version of SZOHack"
-            >
-          </div>
-        </div>
+        <MacOsWindow title="second version of SZOHack">
+          <img
+            :src="getImgUrl(szohack_v2.images[szohack_v2.selected_image])"
+            alt="second version of SZOHack"
+          >
+        </MacOsWindow>
         <div class="row justify-content-center">
           <div
             v-for="i in szohack_v2.images.length" :key="i"
@@ -65,7 +57,12 @@
 </template>
 
 <script>
+import MacOsWindow from './MacOsWindow.vue';
+
 export default {
+  components: {
+    MacOsWindow,
+  },
   Name: 'StalkerOnlineCheat',
   data() {
     return {
@@ -106,43 +103,6 @@ export default {
   padding-bottom: 16px;
   margin: 25px 0;
   border-radius: 6px;
-  .macoswindow {
-    .content {
-      background-color: #000000;
-      border-radius: 0 0 8px 8px;
-      border: 1.5px solid #2c2c2c;
-      border-top: none;
-    }
-    .header {
-      position: relative;
-      background-color: #292929;
-      padding: 2px 0px;
-      padding-left: 8px;
-      border-radius: 8px 8px 0 0;
-      border: 1.5px solid #666666;
-      border-bottom: none;
-      .circle {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        background-color: red;
-        display: inline-block;
-        margin: 0 4px;
-        margin-top: 4px;
-      }
-      .title{
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        color: #9e9e9e;
-        font-weight: normal;
-        font-size: 18px;
-        // top: 0;
-      }
-    }
-  }
   .image_selector {
     // tap area
     top: -5px;
