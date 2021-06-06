@@ -76,7 +76,7 @@ export default {
     content: '';
     background-image: url('./assets/sky_seamless.png');
     background-blend-mode: lighten;
-    opacity: 35%;
+    opacity: 0.35;
   }
 }
 .can-you-feel-the-love-tonight {
