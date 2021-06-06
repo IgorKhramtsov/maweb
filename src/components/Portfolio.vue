@@ -5,7 +5,7 @@
         <div class="row" v-for="item in timeline" :key="item.year">
           <span class="year">{{item.year}}</span>
           <div class="projects" v-for="project in item.projects" :key="project.name">
-            <span v-on:click="setProject(project)">{{project.name}}</span>
+            <span v-on:click="setProject(project)" class="pointer">{{project.name}}</span>
             <ul class="tags list-inline">
               <li v-for="tag in project.tags" :key="tag">{{tag}}</li>
             </ul>
@@ -13,10 +13,6 @@
         </div>
       </div>
       <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
-        <!-- <span class="row title"> -->
-          <!-- <span class="name">{{selectedProject.name}}</span> -->
-          <!-- <span class="year">{{selectedProject.year}}</span> -->
-        <!-- </span> -->
         <div class="row frame-wrapper">
           <div ref="container" class="frame">
             <StalkerOnlineCheat/>
@@ -190,18 +186,12 @@ section {
   }
 }
 .project-info {
-// background: linear-gradient(108.88deg, rgba(1, 1, 1, 0.41) -6.23%, rgba(0, 0, 0, 0.041) 106.16%);
-  // border: 2px solid rgba(46, 41, 63, 0.56);
-  // border-radius: 26px;
-  // backdrop-filter: blur(150px);
-  height: 60vh;
   text-align: left;
   padding: 12px;
   line-height: 1.2em;
   font-size: 22px;
   letter-spacing: 0.096em;
   font-weight: 200;
-  // overflow: hidden;
   .title {
     width: 100%;
     margin-bottom: 8px;
@@ -217,13 +207,14 @@ section {
   }
   .frame-wrapper {
     height: 100%;
-    // width: 100%;
     padding: 0 10px;
     .frame {
       height: 100%;
       width: 100%;
-      // overflow-y: scroll;
     }
   }
+}
+.pointer {
+  cursor: pointer;
 }
 </style>
