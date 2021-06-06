@@ -52,7 +52,7 @@ export default {
 @import './scss/mixins.scss';
 
 #app {
-  font-family: 'Roboto', Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -81,5 +81,23 @@ export default {
 }
 .can-you-feel-the-love-tonight {
   @include can-you-feel-the-love-tonight-text;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  background: #252525;
+  position: absolute;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  @include can-you-feel-the-love-tonight;
 }
 </style>

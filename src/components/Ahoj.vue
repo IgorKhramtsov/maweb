@@ -4,7 +4,7 @@
       <span>hi 👋</span>
       <span>my name is Igor</span>
       <span class="small">i am a software developer</span>
-      <span class="smallest">currenlty located at barnaul, russia</span>
+      <span class="smallest">based in barnaul, russia</span>
       <img class="moloko" src="../assets/milk.svg" alt="milk">
     </div>
   </section>

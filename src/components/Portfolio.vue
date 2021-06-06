@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="row">
       <div class="col-md-3 timeline">
         <div class="row" v-for="item in timeline" :key="item.year">
@@ -12,15 +12,28 @@
           </div>
         </div>
       </div>
-      <div class="col-md project-info" v-if="selectedProject != null">
-        <span class="name">{{selectedProject.name}}</span>
+      <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
+        <!-- <span class="row title"> -->
+          <!-- <span class="name">{{selectedProject.name}}</span> -->
+          <!-- <span class="year">{{selectedProject.year}}</span> -->
+        <!-- </span> -->
+        <div class="row frame-wrapper">
+          <div ref="container" class="frame">
+            <StalkerOnlineCheat/>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import Vue from 'vue';
+import App from '../App.vue';
+import StalkerOnlineCheat from './StalkerOnlineCheat.vue';
+
 export default {
+  components: { StalkerOnlineCheat },
   data() {
     return {
       selectedProject: null,
@@ -28,7 +41,7 @@ export default {
         name: 'stalker online cheat',
         tags: ['C++', 'gamedev'],
         year: 2012,
-        href: '#',
+        // href: Ahoj,
       }, {
         name: 'SZOHack launcher',
         tags: ['C#'],
@@ -100,6 +113,15 @@ export default {
   methods: {
     setProject(project) {
       this.selectedProject = project;
+      const ComponentClass = Vue.extend(App);
+      const instance = new ComponentClass();
+      instance.$mount();
+      const node = this.$refs.container;
+      if (node.hasChildNodes()) {
+        node.replaceChild(instance.$el, node.firstChild);
+      } else {
+        node.appendChild(instance.$el);
+      }
     },
   },
   computed: {
@@ -128,9 +150,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/mixins.scss';
-
-.timeline {
+section {
   margin-top: 80px;
+  ::-webkit-scrollbar {
+    background: transparent;
+  }
+}
+.timeline {
   font-weight: 200;
   font-size: 23px;
   line-height: 1.2em;
@@ -164,19 +190,40 @@ export default {
   }
 }
 .project-info {
-  background: linear-gradient(108.88deg, rgba(1, 1, 1, 0.41) -6.23%, rgba(0, 0, 0, 0.041) 106.16%);
-  border: 2px solid rgba(46, 41, 63, 0.56);
-  border-radius: 26px;
-  backdrop-filter: blur(150px);
+// background: linear-gradient(108.88deg, rgba(1, 1, 1, 0.41) -6.23%, rgba(0, 0, 0, 0.041) 106.16%);
+  // border: 2px solid rgba(46, 41, 63, 0.56);
+  // border-radius: 26px;
+  // backdrop-filter: blur(150px);
   height: 60vh;
   text-align: left;
-  padding: 8px;
-  .name {
-    line-height: 1.2em;
-    font-size: 22px;
-    padding-left: 12px;
-    letter-spacing: 0.096em;
-    font-weight: 200;
+  padding: 12px;
+  line-height: 1.2em;
+  font-size: 22px;
+  letter-spacing: 0.096em;
+  font-weight: 200;
+  // overflow: hidden;
+  .title {
+    width: 100%;
+    margin-bottom: 8px;
+    .name {
+      width: auto;
+      padding-left: 16px;
+    }
+    .year {
+      width: auto;
+      position: absolute;
+      right: 0;
+    }
+  }
+  .frame-wrapper {
+    height: 100%;
+    // width: 100%;
+    padding: 0 10px;
+    .frame {
+      height: 100%;
+      width: 100%;
+      // overflow-y: scroll;
+    }
   }
 }
 </style>
