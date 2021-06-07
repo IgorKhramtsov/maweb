@@ -16,8 +16,8 @@
         </p>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-6 experience">
-          <p>have experience with</p>
+        <div class="col-md-8 experience">
+          <p>have experience with:</p>
           <ul>
             <li>C# windows form</li>
             <li>gamedev (also hacking them)</li>
@@ -60,6 +60,10 @@ export default {
     font-size: 23px;
     line-height: 27px;
     letter-spacing: 0.096em;
+    margin-top: 1.5em;
+    .row {
+      margin-top: 1.5em;
+    }
     p {
       &.internships {
         display: inline-block;
@@ -73,5 +77,27 @@ export default {
 }
 .experience {
   text-align: left;
+  ul {
+    margin-left: 15px;
+    li {
+      list-style: none;
+      position: relative;
+      display: block;
+      font-size: 20px;
+      margin-top: 0.5em;
+      letter-spacing: 0.195em;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: -4px;
+        display: block;
+        width: 19px;
+        height: 2px;
+        border-radius: 20px;
+        background-color: #7e8496;
+      }
+    }
+  }
 }
 </style>

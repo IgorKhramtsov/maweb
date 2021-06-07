@@ -69,8 +69,8 @@
         to sell my cheat through lets name it 'publisher'. Of course
         i agree, and after dialog in skype sent them special version
         of dll with changed author, and with disabled linking.
-        From this and on, you can find some videos, posts and images
-        of people selling this first version of cheat.
+        <!-- pretentious, rewrite --> From this and on, you can find some videos, posts and images
+        of people selling this first version of cheat. <!-- pretentious, rewrite -->
       </p>
       <div class="photoframe video">
         <MacOsWindow title="leaked first version of cheat">

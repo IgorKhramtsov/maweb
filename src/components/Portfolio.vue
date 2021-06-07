@@ -176,7 +176,7 @@ section {
       li {
         display: inline-block;
         font-size: 16px;
-        background-color: #324ead;
+        background-color: $can-you-feel-the-love-tonight-start-darker;
         color: #cccccc;
         border-radius: 40px;
         padding: 0 6px 0 8px;

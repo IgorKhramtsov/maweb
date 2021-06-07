@@ -4,6 +4,8 @@ $background-color: #252525;
 $text-color-light: #484848;
 $background-color-light: #E2E2E2;
 
+$can-you-feel-the-love-tonight-start: #4568DC;
+$can-you-feel-the-love-tonight-start-darker: #324ead;
 @mixin can-you-feel-the-love-tonight {
     background: linear-gradient(90deg, #4568DC -12.23%, #B06AB3 129.26%);
 }
