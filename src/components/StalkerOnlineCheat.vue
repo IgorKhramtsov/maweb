@@ -1,21 +1,21 @@
 // TODO: rewrite slider
 
 <template>
-  <div class="row text">
+  <div class="row text justify-content-center">
     <div class="header">
       <span class="title">stalker online cheat</span>
       <span class="year">2012</span>
     </div>
-      <p class="col-md-8">
+      <p class="col-md-10">
         Back in 2012 i've been playing with cheat&nbsp;engine,
         scrolling through some cheat forum, and occasionally
         find article describing process of making auto-injected
         cheat through replacing d3d9.dll, with source code
         attached. <br>
       </p>
-      <div class="col-md-4"/>
-      <div class="col-md-4"/>
-      <p class="col-md-8 right">
+      <!-- <div class="col-md-6"/> -->
+      <!-- <div class="col-md-6"/> -->
+      <p class="col-md-10">
         From this moment i've spent some weeks trying
         to undestarnd how to apply this to game i was play at
         those time, without any clue how programming work at all,
@@ -37,19 +37,17 @@
           />
         </div>
       </div>
-      <p class="col-md-8">
+      <p class="col-md-10">
         And after a while, with help of some people from the same
         forum, i have succesfully config, build and run my
         frankestein-cheat, and start to enhancing it, with memhack functions.<br>
-      </p><div class="col-md-4"/>
-      <div class="col-md-4"/>
-      <p class="col-md-8 right">
+      </p>
+      <p class="col-md-10">
         I've should say thanks to developer team of this game,
         because if they have any anti-cheat system at those time,
         i've never been able to build this cheat, and find my passion
         for programming. <br>
       </p>
-      <div class="col-md-5"/>
       <div class="photoframe">
         <MacOsWindow title="third version of SZOHack">
           <img
@@ -66,7 +64,7 @@
           />
         </div>
       </div>
-      <p class="col-md-8">
+      <p class="col-md-10">
         Back in the days i was naive little boy, and get offering
         to sell my cheat through lets name it 'publisher'. Of course
         i agree, and after dialog in skype sent them special version
@@ -160,17 +158,18 @@ export default {
 }
 .video {
   width: 560px;
-  margin: auto !important;
+  // margin: auto !important;
 }
 .text {
   font-size: 22px;
   p {
-    margin-bottom: 30px;
+    margin-top: 2em;
+    margin-bottom: 0;
   }
 }
 .photoframe {
   width: auto;
-  margin: 25px 0;
+  margin-top: 2em;
   .padding {
     padding: 16px;
   }
