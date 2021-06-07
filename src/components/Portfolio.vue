@@ -153,6 +153,7 @@ section {
   }
 }
 .timeline {
+  margin-top: 10px;
   font-weight: 200;
   font-size: 23px;
   line-height: 1.2em;
@@ -163,9 +164,11 @@ section {
     &::after {
       content: '';
       display: block;
+      position: relative;
+      left: -1px;
       @include dark-ocean;
       width: 60%;
-      height: 3px;
+      height: 2px;
       margin: auto;
       margin-top: 1px;
       border-radius: 3px;
@@ -188,7 +191,7 @@ section {
 }
 .project-info {
   text-align: left;
-  padding: 12px;
+  // padding: 12px;
   line-height: 1.2em;
   font-size: 22px;
   letter-spacing: 0.096em;
