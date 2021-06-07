@@ -34,7 +34,7 @@ export default {
     return {
       selectedProject: null,
       projects: [{
-        name: 'stalker online cheat',
+        name: 'SZOHack',
         tags: ['C++', 'gamedev'],
         year: 2012,
         // href: Ahoj,

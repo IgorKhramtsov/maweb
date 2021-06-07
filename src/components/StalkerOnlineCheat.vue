@@ -1,7 +1,7 @@
 // TODO: rewrite slider
 
 <template>
-  <Article title='stalker online cheat' year='2012'>
+  <Article title='SZOHack' year='2012'>
     <p class="col-md-10">
       Back in 2012 i've been playing with cheat&nbsp;engine,
       scrolling through some cheat forum, and occasionally
