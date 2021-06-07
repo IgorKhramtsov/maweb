@@ -163,7 +163,7 @@ section {
     &::after {
       content: '';
       display: block;
-      @include can-you-feel-the-love-tonight;
+      @include monolith-asteroid;
       width: 60%;
       height: 3px;
       margin: auto;

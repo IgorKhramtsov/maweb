@@ -56,7 +56,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #e2e2e2;
+  color: #bbbbbb;
 }
 .background-void {
   height: 100%;

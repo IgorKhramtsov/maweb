@@ -5,7 +5,7 @@
       <span>my name is Igor</span>
       <span class="small">i am a software developer</span>
       <span class="smallest">based in barnaul, russia</span>
-      <img class="moloko" src="../assets/milk.svg" alt="milk">
+      <img class="moloko" src="../assets/milk.png" alt="milk">
     </div>
   </section>
 </template>
@@ -22,7 +22,7 @@ export default {
   padding-top: 80px;
   span {
     display: block;
-    color: #252525;
+    color: #484848;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
@@ -55,7 +55,6 @@ export default {
   position: absolute;
   top: 10px;
   right: 10px;
-  transform: rotate(-3deg);
-  height: 46px;
+  height: 45px;
 }
 </style>

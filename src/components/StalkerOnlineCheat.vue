@@ -140,17 +140,19 @@ export default {
   position: relative;
   &::after {
     @include can-you-feel-the-love-tonight;
+    position: relative;
     content: '';
     display: block;
+    top: 7px;
     width: 100%;
     height: 2px;
   }
   .title {
-    font-size: 48px;
+    font-size: 36px;
   }
   .year {
     letter-spacing: 0.2em;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     top: -7px;
     margin-left: 5px;
@@ -194,7 +196,7 @@ export default {
       top: 8px;
       border-radius: 8px;
       left: 0;
-      background-color: #4568DC;
+      background-color: #000c35;
       height: 4px;
       width: 100%;
     }
