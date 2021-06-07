@@ -131,13 +131,6 @@ export default {
 .video {
   width: 560px;
 }
-.text {
-  font-size: 22px;
-  p {
-    margin-top: 2em;
-    margin-bottom: 0;
-  }
-}
 .photoframe {
   width: auto;
   margin-top: 2em;

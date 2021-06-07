@@ -15,7 +15,7 @@
       <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
         <div class="row frame-wrapper">
           <div ref="container" class="frame">
-            <StalkerOnlineCheat/>
+            <SZOHackLauncher/>
           </div>
         </div>
       </div>
@@ -25,11 +25,11 @@
 
 <script>
 import Vue from 'vue';
-import App from '../App.vue';
 import StalkerOnlineCheat from './StalkerOnlineCheat.vue';
+import SZOHackLauncher from './SZOHackLauncher.vue';
 
 export default {
-  components: { StalkerOnlineCheat },
+  components: { SZOHackLauncher },
   data() {
     return {
       selectedProject: null,
@@ -37,12 +37,12 @@ export default {
         name: 'SZOHack',
         tags: ['C++', 'gamedev'],
         year: 2012,
-        // href: Ahoj,
+        href: StalkerOnlineCheat,
       }, {
         name: 'SZOHack launcher',
         tags: ['C#'],
         year: 2013,
-        href: '#',
+        href: SZOHackLauncher,
       }, {
         name: 'Terraria clone draft',
         tags: ['C#', 'Unity', 'gamedev'],
@@ -109,7 +109,7 @@ export default {
   methods: {
     setProject(project) {
       this.selectedProject = project;
-      const ComponentClass = Vue.extend(App);
+      const ComponentClass = Vue.extend(project.href);
       const instance = new ComponentClass();
       instance.$mount();
       const node = this.$refs.container;

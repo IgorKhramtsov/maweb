@@ -22,7 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/vars.scss';
-
+p {
+  margin-top: 2em;
+}
 .header {
   margin-bottom: 40px;
   text-align: right;
