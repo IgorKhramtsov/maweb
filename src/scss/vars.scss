@@ -1,8 +1,17 @@
+$text-color: #bfbfbf;
+$background-color: #252525;
+
+$text-color-light: #484848;
+$background-color-light: #E2E2E2;
+
 @mixin can-you-feel-the-love-tonight {
     background: linear-gradient(90deg, #4568DC -12.23%, #B06AB3 129.26%);
 }
-@mixin monolith-asteroid {
+@mixin dark-ocean {
     background: linear-gradient(180deg, rgba(55, 59, 68, 1) -5.1%, rgba(66, 134, 244, 1) 109.05%);
+}
+@mixin monolith-asteroid {
+    background: linear-gradient(180deg, #0F2027 -5.1%, #203A43 50%, #2C5364 109.05%);
 }
 @mixin can-you-feel-the-love-tonight-text {
     @include can-you-feel-the-love-tonight;

@@ -17,28 +17,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../scss/vars.scss';
+
 .hello {
   margin: auto;
   padding-top: 80px;
   span {
     display: block;
-    color: #484848;
+    color: $text-color-light;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
     line-height: 42px;
-    // margin-bottom: 3px;
     ~.small {
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
-      // line-height: 28px;
     }
     ~.smallest {
       font-style: normal;
       font-weight: 300;
       font-size: 22px;
-      // line-height: 26px;
     }
   }
 }
@@ -48,7 +47,7 @@ export default {
   mask-size: auto 590px;
   mask-position: center top;
   background-image: url('../assets/noise.png');
-  background-color: #E2E2E2;
+  background-color: $background-color-light;
   height: 90vh;
 }
 .moloko {

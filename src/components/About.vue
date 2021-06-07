@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../scss/mixins.scss';
+@import '../scss/vars.scss';
 
 .container {
   height: 100vh;

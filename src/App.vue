@@ -49,21 +49,21 @@ export default {
 </script>
 
 <style lang="scss">
-@import './scss/mixins.scss';
+@import './scss/vars.scss';
 
 #app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #bbbbbb;
+  color: $text-color;
 }
 .background-void {
   height: 100%;
   width: 100%;
   display: block;
   position: fixed;
-  background-color: #252525;
+  background-color: $background-color;
   z-index: -1;
   &:before{
     z-index: 1;
@@ -84,7 +84,7 @@ export default {
 }
 *::-webkit-scrollbar {
   width: 6px;
-  background: #252525;
+  background: $background-color;
   position: absolute;
 }
 *::-webkit-scrollbar-track-piece {

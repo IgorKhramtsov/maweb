@@ -132,7 +132,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/mixins.scss';
+@import '../scss/vars.scss';
 
 .header {
   margin-bottom: 40px;
@@ -196,7 +196,7 @@ export default {
       top: 8px;
       border-radius: 8px;
       left: 0;
-      background-color: #000c35;
+      background-color: rgba(55, 59, 68, 1);
       height: 4px;
       width: 100%;
     }

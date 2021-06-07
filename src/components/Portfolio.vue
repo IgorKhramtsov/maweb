@@ -145,7 +145,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/mixins.scss';
+@import '../scss/vars.scss';
 section {
   margin-top: 80px;
   ::-webkit-scrollbar {
@@ -163,7 +163,7 @@ section {
     &::after {
       content: '';
       display: block;
-      @include monolith-asteroid;
+      @include dark-ocean;
       width: 60%;
       height: 3px;
       margin: auto;
@@ -176,7 +176,8 @@ section {
       li {
         display: inline-block;
         font-size: 16px;
-        background-color: #4568DC;
+        background-color: #324ead;
+        color: #cccccc;
         border-radius: 40px;
         padding: 0 6px 0 8px;
         margin-right: 4px;
