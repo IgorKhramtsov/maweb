@@ -27,7 +27,7 @@ p {
 }
 .header {
   margin-bottom: 40px;
-  text-align: right;
+  text-align: center;
   position: relative;
   &::after {
     @include can-you-feel-the-love-tonight;

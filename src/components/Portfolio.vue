@@ -1,21 +1,23 @@
 <template>
-  <section class="container">
-    <div class="row">
-      <div class="col-md-3 timeline">
-        <div class="row" v-for="item in timeline" :key="item.year">
-          <span class="year">{{item.year}}</span>
-          <div class="projects" v-for="project in item.projects" :key="project.name">
-            <span v-on:click="setProject(project)" class="pointer">{{project.name}}</span>
-            <ul class="tags list-inline">
-              <li v-for="tag in project.tags" :key="tag">{{tag}}</li>
-            </ul>
+  <section class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 timeline">
+          <div class="row" v-for="item in timeline" :key="item.year">
+            <span class="year">{{item.year}}</span>
+            <div class="projects" v-for="project in item.projects" :key="project.name">
+              <span v-on:click="setProject(project)" class="pointer">{{project.name}}</span>
+              <ul class="tags list-inline">
+                <li v-for="tag in project.tags" :key="tag">{{tag}}</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
-        <div class="row frame-wrapper">
-          <div ref="container" class="frame">
-            <SZOHackLauncher/>
+        <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
+          <div class="row frame-wrapper">
+            <div ref="container" class="frame">
+              <StarboundClone/>
+            </div>
           </div>
         </div>
       </div>
@@ -27,9 +29,10 @@
 import Vue from 'vue';
 import StalkerOnlineCheat from './StalkerOnlineCheat.vue';
 import SZOHackLauncher from './SZOHackLauncher.vue';
+import StarboundClone from './StarboundClone.vue';
 
 export default {
-  components: { SZOHackLauncher },
+  components: { StarboundClone },
   data() {
     return {
       selectedProject: null,
@@ -44,10 +47,10 @@ export default {
         year: 2013,
         href: SZOHackLauncher,
       }, {
-        name: 'Terraria clone draft',
+        name: 'Starbound clone draft',
         tags: ['C#', 'Unity', 'gamedev'],
         year: 2014,
-        href: '#',
+        href: StarboundClone,
       }, {
         name: 'SteamMultiAccount',
         tags: ['C#'],
@@ -146,8 +149,42 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/vars.scss';
+
+.container-fluid {
+  padding: 80px 0;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      #57575700 -5.1%,
+      #575757 40%,
+      #575757 70%,
+      #57575700 109.05%
+    );
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  background: linear-gradient(
+    90deg,
+  #373b4400 -5.1%,
+  #1d1d20 40%,
+  #1d1d20 70%,
+  #373b4400 109.05%
+  );
+  // backdrop-filter: blur(203px);
+}
 section {
   margin-top: 80px;
+  // background-color: $background-color;
   ::-webkit-scrollbar {
     background: transparent;
   }

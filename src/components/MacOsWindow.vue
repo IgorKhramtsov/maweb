@@ -23,6 +23,8 @@ export default {
 
 <style lang="scss" scoped>
 .macoswindow {
+  width: auto;
+  margin-top: 2em;
   .content {
     background-color: #000000;
     border-radius: 0 0 8px 8px;
