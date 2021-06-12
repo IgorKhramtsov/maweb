@@ -14,7 +14,7 @@
     <div class="photoframe">
       <MacOsWindow title="SZOHack launcher">
         <img
-            src='../assets/szohack_launcher.png'
+            src='../../assets/szohack_launcher.png'
             alt="SZOHack launcher"
             class="padding"
           >
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import MacOsWindow from './MacOsWindow.vue';
-import Article from './Article.vue';
+import MacOsWindow from '../MacOsWindow.vue';
+import Article from '../Article.vue';
 
 export default {
   components: {

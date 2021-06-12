@@ -31,7 +31,7 @@
       </div>
       <div class="row">
         <p>
-          currenlty working on <a href="https://singularity-app.com" target="_blank">SingularityApp</a> at Sibirix as Flutter developer.
+          currently working on <a href="https://singularity-app.com" target="_blank">SingularityApp</a> at Sibirix as Flutter developer.
         </p>
       </div>
     </div>

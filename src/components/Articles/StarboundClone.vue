@@ -10,7 +10,7 @@
     <div class="col-md-10">
       <MacOsWindow title="Starbound clone draft">
         <img
-            src='../assets/starboundclone.gif'
+            src='../../assets/starboundclone.gif'
             alt="Starbound clone draft"
             class="gif"
           >
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import MacOsWindow from './MacOsWindow.vue';
-import Article from './Article.vue';
+import MacOsWindow from '../MacOsWindow.vue';
+import Article from '../Article.vue';
 
 export default {
   components: {

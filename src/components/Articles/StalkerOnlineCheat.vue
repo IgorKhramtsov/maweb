@@ -88,8 +88,8 @@
 </template>
 
 <script>
-import MacOsWindow from './MacOsWindow.vue';
-import Article from './Article.vue';
+import MacOsWindow from '../MacOsWindow.vue';
+import Article from '../Article.vue';
 
 export default {
   components: {
@@ -119,14 +119,14 @@ export default {
   methods: {
     getImgUrl(pic) {
       // eslint-disable-next-line import/no-dynamic-require, global-require
-      return require(`../assets/${pic}`);
+      return require(`../../assets/${pic}`);
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/vars.scss';
+@import '../../scss/vars.scss';
 
 .video {
   width: 560px;

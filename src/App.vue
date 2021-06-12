@@ -100,4 +100,7 @@ export default {
   border-radius: 20px;
   @include can-you-feel-the-love-tonight;
 }
+a {
+  @include can-you-feel-the-love-tonight-text;
+}
 </style>

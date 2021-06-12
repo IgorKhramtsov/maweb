@@ -16,7 +16,7 @@
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
             <div ref="container" class="frame">
-              <StarboundClone/>
+              <SteamMultiAccount/>
             </div>
           </div>
         </div>
@@ -27,12 +27,13 @@
 
 <script>
 import Vue from 'vue';
-import StalkerOnlineCheat from './StalkerOnlineCheat.vue';
-import SZOHackLauncher from './SZOHackLauncher.vue';
-import StarboundClone from './StarboundClone.vue';
+import StalkerOnlineCheat from './Articles/StalkerOnlineCheat.vue';
+import SZOHackLauncher from './Articles/SZOHackLauncher.vue';
+import StarboundClone from './Articles/StarboundClone.vue';
+import SteamMultiAccount from './Articles/SteamMultiAccount.vue';
 
 export default {
-  components: { StarboundClone },
+  components: { SteamMultiAccount },
   data() {
     return {
       selectedProject: null,
