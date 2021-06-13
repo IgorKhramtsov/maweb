@@ -16,7 +16,7 @@
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
             <div ref="container" class="frame">
-              <SteamMultiAccount/>
+              <TFAuthenticator/>
             </div>
           </div>
         </div>
@@ -31,9 +31,10 @@ import StalkerOnlineCheat from './Articles/StalkerOnlineCheat.vue';
 import SZOHackLauncher from './Articles/SZOHackLauncher.vue';
 import StarboundClone from './Articles/StarboundClone.vue';
 import SteamMultiAccount from './Articles/SteamMultiAccount.vue';
+import TFAuthenticator from './Articles/TFAuthenticator.vue';
 
 export default {
-  components: { SteamMultiAccount },
+  components: { TFAuthenticator },
   data() {
     return {
       selectedProject: null,
@@ -56,17 +57,12 @@ export default {
         name: 'SteamMultiAccount',
         tags: ['C#'],
         year: 2015,
-        href: '#',
+        href: SteamMultiAccount,
       }, {
         name: 'Steam2FAuthenticator',
         tags: ['C#'],
         year: 2016,
-        href: '#',
-      }, {
-        name: 'Minecraft Twitch integration mod',
-        tags: ['Java', 'gamedev'],
-        year: 2017,
-        href: '#',
+        href: TFAuthenticator,
       }, {
         name: 'Receipt recognition',
         tags: ['C++', 'openCV'],

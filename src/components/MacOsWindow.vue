@@ -21,6 +21,36 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.image_selector {
+  // tap area
+  top: -5px;
+  height: 20px;
+  width: 20%;
+  flex: 0 0 auto;
+  margin: 0 8px;
+  padding: 0;
+  // background-color: black;
+  cursor: pointer;
+  position: relative;
+  &.active {
+    &::after {
+      background-color: #B06AB3;
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    border-radius: 8px;
+    left: 0;
+    background-color: rgba(55, 59, 68, 1);
+    height: 4px;
+    width: 100%;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .macoswindow {
   width: auto;
