@@ -16,7 +16,7 @@
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
             <div ref="container" class="frame">
-              <TFAuthenticator/>
+              <ReceiptRecognition/>
             </div>
           </div>
         </div>
@@ -32,9 +32,10 @@ import SZOHackLauncher from './Articles/SZOHackLauncher.vue';
 import StarboundClone from './Articles/StarboundClone.vue';
 import SteamMultiAccount from './Articles/SteamMultiAccount.vue';
 import TFAuthenticator from './Articles/TFAuthenticator.vue';
+import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
 
 export default {
-  components: { TFAuthenticator },
+  components: { ReceiptRecognition },
   data() {
     return {
       selectedProject: null,
@@ -64,10 +65,10 @@ export default {
         year: 2016,
         href: TFAuthenticator,
       }, {
-        name: 'Receipt recognition',
+        name: 'Receipt recognition algorithm',
         tags: ['C++', 'openCV'],
         year: 2018,
-        href: '#',
+        href: ReceiptRecognition,
       }, {
         name: 'Simple e-commerce website',
         tags: ['vue', 'php'],
