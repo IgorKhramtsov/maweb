@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <div class="background-void"/>
-    <Ahoj/>
-    <Welcome/>
+    <div class="background-void">
+      <div
+        ref="bgf"
+        class="background-first"
+        :style="{ transform: `translate3d(0px, ${bgscroll}%, 0px)` }"
+      />
+      <div
+        ref="bgs"
+        class="background-second"
+        :style="{ transform: `translate3d(0px, ${bgscroll / 1.5}%, 0px)` }"
+      />
+    </div>
+    <Ahoj />
+    <Welcome ref="welcomeref" />
 
-    <About v-bind:internships="internships"/>
-    <Portfolio/>
+    <About :internships="internships" />
+    <Portfolio />
 
-    <Ending/>
+    <Ending />
   </div>
 </template>
 
@@ -20,6 +31,13 @@ import Portfolio from './components/Portfolio.vue';
 
 export default {
   name: 'App',
+  components: {
+    Ahoj,
+    Welcome,
+    About,
+    Ending,
+    Portfolio,
+  },
   data() {
     return {
       internships: [
@@ -36,14 +54,21 @@ export default {
           href: 'https://sibirix.com',
         },
       ],
+      bgscroll: 100.0,
     };
   },
-  components: {
-    Ahoj,
-    Welcome,
-    About,
-    Ending,
-    Portfolio,
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const { scrollY } = window;
+      const height = document.body.offsetHeight;
+      this.bgscroll = ((height - scrollY) / (height * 1.0)) * 100;
+    },
   },
 };
 </script>
@@ -65,6 +90,17 @@ export default {
   position: fixed;
   background-color: $background-color;
   z-index: -1;
+  div {
+    width: 100%;
+    height: 100%;
+    transition: 0.2s transform ease-out;
+  }
+  .background-first {
+    background-image: url('./assets/stars_big.svg');
+  }
+  .background-second {
+    background-image: url('./assets/stars_small.svg');
+  }
   &:before{
     z-index: 1;
     position: fixed;
@@ -74,9 +110,9 @@ export default {
     left: 0;
     top: 0;
     content: '';
-    background-image: url('./assets/sky_seamless.png');
-    background-blend-mode: lighten;
-    opacity: 0.35;
+    // background-image: url('./assets/sky_seamless.png');
+    // background-blend-mode: lighten;
+    // opacity: 0.35;
   }
 }
 .can-you-feel-the-love-tonight {

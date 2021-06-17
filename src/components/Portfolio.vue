@@ -35,6 +35,7 @@ import TFAuthenticator from './Articles/TFAuthenticator.vue';
 import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
 
 export default {
+  name: 'Portfolio',
   components: { ReceiptRecognition },
   data() {
     return {
@@ -107,20 +108,6 @@ export default {
       }],
     };
   },
-  methods: {
-    setProject(project) {
-      this.selectedProject = project;
-      const ComponentClass = Vue.extend(project.href);
-      const instance = new ComponentClass();
-      instance.$mount();
-      const node = this.$refs.container;
-      if (node.hasChildNodes()) {
-        node.replaceChild(instance.$el, node.firstChild);
-      } else {
-        node.appendChild(instance.$el);
-      }
-    },
-  },
   computed: {
     timeline() {
       const projectsByYear = {};
@@ -141,7 +128,20 @@ export default {
       return timeline;
     },
   },
-  name: 'Portfolio',
+  methods: {
+    setProject(project) {
+      this.selectedProject = project;
+      const ComponentClass = Vue.extend(project.href);
+      const instance = new ComponentClass();
+      instance.$mount();
+      const node = this.$refs.container;
+      if (node.hasChildNodes()) {
+        node.replaceChild(instance.$el, node.firstChild);
+      } else {
+        node.appendChild(instance.$el);
+      }
+    },
+  },
 };
 </script>
 
@@ -150,39 +150,9 @@ export default {
 
 .container-fluid {
   padding: 80px 0;
-  position: relative;
-  &::before, &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    background: linear-gradient(
-      90deg,
-      #57575700 -5.1%,
-      #575757 40%,
-      #575757 70%,
-      #57575700 109.05%
-    );
-  }
-  &::before {
-    top: 0;
-  }
-  &::after {
-    bottom: 0;
-  }
-  background: linear-gradient(
-    90deg,
-  #373b4400 -5.1%,
-  #1d1d20 40%,
-  #1d1d20 70%,
-  #373b4400 109.05%
-  );
-  // backdrop-filter: blur(203px);
 }
 section {
   margin-top: 80px;
-  // background-color: $background-color;
   ::-webkit-scrollbar {
     background: transparent;
   }
@@ -226,7 +196,6 @@ section {
 }
 .project-info {
   text-align: left;
-  // padding: 12px;
   line-height: 1.2em;
   font-size: 22px;
   letter-spacing: 0.096em;
