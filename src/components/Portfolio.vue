@@ -3,12 +3,21 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 timeline">
-          <div class="row" v-for="item in timeline" :key="item.year">
-            <span class="year">{{item.year}}</span>
-            <div class="projects" v-for="project in item.projects" :key="project.name">
-              <span v-on:click="setProject(project)" class="pointer">{{project.name}}</span>
-              <ul class="tags list-inline">
-                <li v-for="tag in project.tags" :key="tag">{{tag}}</li>
+          <div v-for="item in timeline" :key="item.year" class="row">
+            <span :class="`year selectable-text ${item.year == selectedYear ? 'active' : ''}`">
+              {{ item.year }}
+            </span>
+            <div v-for="project in item.projects" :key="project.name" class="projects">
+              <span
+                :class="`pointer selectable-text ${project == selectedProject ? 'active' : ''}`"
+                @click="setProject(project)"
+              >
+                {{ project.name }}
+              </span>
+              <ul :class="`tags list-inline ${project == selectedProject ? 'active' : ''}`">
+                <li v-for="tag in project.tags" :key="tag">
+                  {{ tag }}
+                </li>
               </ul>
             </div>
           </div>
@@ -127,6 +136,13 @@ export default {
 
       return timeline;
     },
+    selectedYear() {
+      if (this.selectedProject != null) {
+        return this.selectedProject.year;
+      }
+      //
+      return null;
+    },
   },
   methods: {
     setProject(project) {
@@ -147,6 +163,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../scss/vars.scss';
+$text-trasparentize: .5;
 
 .container-fluid {
   padding: 80px 0;
@@ -164,14 +181,29 @@ section {
   line-height: 1.2em;
   text-align: center;
   letter-spacing: 0.096em;
+  .selectable-text {
+    transition: color .15s ease;
+    color: transparentize($color: $text-color, $amount: $text-trasparentize);
+    &.active {
+      color: $text-color;
+    }
+    &.pointer { // project name
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
   .year {
     margin-bottom: 15px;
+    &.active::after {
+      @include dark-ocean;
+    }
     &::after {
       content: '';
       display: block;
       position: relative;
       left: -1px;
-      @include dark-ocean;
+      background-color: $disabled-item;
       width: 60%;
       height: 2px;
       margin: auto;
@@ -181,11 +213,16 @@ section {
   }
   .projects {
     .tags {
-      li {
-        display: inline-block;
-        font-size: 16px;
+      &.active>li{
         background-color: $can-you-feel-the-love-tonight-start-darker;
         color: #cccccc;
+      }
+      li {
+        transition: color background-color .15s ease;
+        background-color: $disabled-item;
+        color: transparentize(#cccccc, $text-trasparentize);
+        display: inline-block;
+        font-size: 16px;
         border-radius: 40px;
         padding: 0 6px 0 8px;
         margin-right: 4px;

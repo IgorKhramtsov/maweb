@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/vars.scss';
+
 .image_selector {
   // tap area
   top: -5px;
@@ -44,7 +46,7 @@ export default {
     top: 8px;
     border-radius: 8px;
     left: 0;
-    background-color: rgba(55, 59, 68, 1);
+    background-color: $disabled-item;
     height: 4px;
     width: 100%;
   }
