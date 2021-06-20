@@ -86,6 +86,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $text-color;
+  overflow-x: hidden;
 }
 .background-void {
   height: 100%;
@@ -114,9 +115,6 @@ export default {
     left: 0;
     top: 0;
     content: '';
-    // background-image: url('./assets/sky_seamless.png');
-    // background-blend-mode: lighten;
-    // opacity: 0.35;
   }
 }
 .can-you-feel-the-love-tonight {

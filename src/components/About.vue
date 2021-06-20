@@ -1,13 +1,15 @@
 <template>
-  <section class='container'>
+  <section class="container">
     <div class="about">
       <div class="row">
-        <p>started coding at 15, made a few personal projects,
+        <p>
+          started coding at 15, made a few personal projects,
           <br>and successfully get the Bachelor’s degree.
         </p>
       </div>
       <div class="row">
-        <p class="internships">complete internship at
+        <p class="internships">
+          complete internship at
           <span v-for="i in internships.length" :key="i">
             <a :href="internships[i-1].href" target="_blank">{{internships[i-1].name}}</a>
             <span>{{i == internships.length - 1 ? ' and ' : i == internships.length ? "." : ", "}}
@@ -35,6 +37,11 @@
         </p>
       </div>
     </div>
+    <img
+      src="../assets/planet_1.svg"
+      alt="planet"
+      :style="{ transform: `translate3d(0px, ${scroll}%, 0px)` }"
+    >
   </section>
 </template>
 
@@ -43,6 +50,24 @@ export default {
   name: 'About',
   props: {
     internships: Array,
+  },
+  data() {
+    return {
+      scroll: 0.0,
+    };
+  },
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const { scrollY } = window;
+      const height = document.body.offsetHeight;
+      this.scroll = -100 + ((height - scrollY) / (height * 1.0)) * 100;
+    },
   },
 };
 </script>
@@ -55,6 +80,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   .about {
     font-weight: 300;
     font-size: 23px;
@@ -99,5 +125,12 @@ export default {
       }
     }
   }
+}
+img {
+  width: 300px;
+  position: absolute;
+  top: 610px;
+  right: -200px;
+  transition: transform .4s ease;
 }
 </style>

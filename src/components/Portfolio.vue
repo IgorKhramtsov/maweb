@@ -3,6 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 timeline">
+          <img
+            src="../assets/planet_2.svg"
+            alt="planet"
+            :style="{ transform: `translate3d(0px, ${scroll}%, 0px)` }"
+          >
           <div v-for="item in timeline" :key="item.year" class="row">
             <span :class="`year selectable-text ${item.year == selectedYear ? 'active' : ''}`">
               {{ item.year }}
@@ -25,7 +30,7 @@
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
             <div ref="container" class="frame">
-              <ReceiptRecognition/>
+              <ReceiptRecognition />
             </div>
           </div>
         </div>
@@ -49,6 +54,7 @@ export default {
   data() {
     return {
       selectedProject: null,
+      scroll: 0,
       projects: [{
         name: 'SZOHack',
         tags: ['C++', 'gamedev'],
@@ -140,9 +146,14 @@ export default {
       if (this.selectedProject != null) {
         return this.selectedProject.year;
       }
-      //
       return null;
     },
+  },
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  unmounted() {
+    document.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     setProject(project) {
@@ -156,6 +167,11 @@ export default {
       } else {
         node.appendChild(instance.$el);
       }
+    },
+    handleScroll() {
+      const { scrollY } = window;
+      const height = document.body.offsetHeight;
+      this.scroll = ((height - scrollY) / (height * 1.0)) * 200;
     },
   },
 };
@@ -181,6 +197,14 @@ section {
   line-height: 1.2em;
   text-align: center;
   letter-spacing: 0.096em;
+  position: relative;
+  img {
+    position: absolute;
+    left: -250px;
+    bottom: 30%;
+    width: 250px;
+    transition: transform .4s ease;
+  }
   .selectable-text {
     transition: color .15s ease;
     color: transparentize($color: $text-color, $amount: $text-trasparentize);
