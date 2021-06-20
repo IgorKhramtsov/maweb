@@ -1,7 +1,7 @@
 <template>
     <section class="container-fluid">
         <span>THE VOID</span>
-        <img src="../assets/milkcat.png" alt="cat drinks milk">
+        <!-- <img src="../assets/milkcat.png" alt="cat drinks milk"> -->
     </section>
 </template>
 

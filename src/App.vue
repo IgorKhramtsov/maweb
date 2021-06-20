@@ -18,6 +18,8 @@
     <About :internships="internships" />
     <Portfolio />
 
+    <Contact />
+
     <Ending />
   </div>
 </template>
@@ -28,6 +30,7 @@ import Ahoj from './components/Ahoj.vue';
 import Welcome from './components/Welcome.vue';
 import Ending from './components/Ending.vue';
 import Portfolio from './components/Portfolio.vue';
+import Contact from './components/Contact.vue';
 
 export default {
   name: 'App',
@@ -37,6 +40,7 @@ export default {
     About,
     Ending,
     Portfolio,
+    Contact,
   },
   data() {
     return {
