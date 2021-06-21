@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-12">
           <span class="info">
-            you can contact me by email at&nbsp;<a href="mailto:i@khramtsov.dev">i@khramtsov.dev</a>
+            by email at&nbsp;<a href="mailto:i@khramtsov.dev">i@khramtsov.dev</a>
             or via telegram&nbsp;<a href="https://t.me/vostmarkh" target="_blank">@vostmarkh</a>
           </span>
         </div>
