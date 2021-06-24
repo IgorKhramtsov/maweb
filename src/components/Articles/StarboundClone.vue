@@ -1,5 +1,5 @@
 <template>
-  <Article title='Starbound clone draft' year='2014'>
+  <Article title="Starbound clone draft" year="2014">
     <p class="col-md-10">
       In summer holidays i was playing with Unity and start creating of
       Starbound clone (because it has interesting mechanics, i like to learn, and
@@ -10,10 +10,10 @@
     <div class="col-md-10">
       <MacOsWindow title="Starbound clone draft">
         <img
-            src='../../assets/starboundclone.gif'
-            alt="Starbound clone draft"
-            class="gif"
-          >
+          src='../../assets/starboundclone.gif'
+          alt="Starbound clone draft"
+          class="gif"
+        >
       </MacOsWindow>
     </div>
     <p class="col-md-10">
@@ -28,11 +28,11 @@ import MacOsWindow from '../MacOsWindow.vue';
 import Article from '../Article.vue';
 
 export default {
+  name: 'StarboundClone',
   components: {
     MacOsWindow,
     Article,
   },
-  name: 'StarboundClone',
 };
 </script>
 

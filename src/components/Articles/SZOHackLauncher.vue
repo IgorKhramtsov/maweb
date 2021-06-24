@@ -1,5 +1,5 @@
 <template>
-  <Article title='SZOHack launcher' year='2013'>
+  <Article title="SZOHack launcher" year="2013">
     <p class="col-md-10">
       For selling cheat, i've made, i had to create launcher
       for managing updates, securing linking method, by verifying
@@ -14,10 +14,10 @@
     <div class="photoframe">
       <MacOsWindow title="SZOHack launcher">
         <img
-            src='../../assets/szohack_launcher.png'
-            alt="SZOHack launcher"
-            class="padding"
-          >
+          src='../../assets/szohack_launcher.png'
+          alt="SZOHack launcher"
+          class="padding"
+        >
       </MacOsWindow>
     </div>
   </Article>
@@ -28,11 +28,11 @@ import MacOsWindow from '../MacOsWindow.vue';
 import Article from '../Article.vue';
 
 export default {
+  name: 'SZOHack',
   components: {
     MacOsWindow,
     Article,
   },
-  name: 'SZOHack',
 };
 </script>
 

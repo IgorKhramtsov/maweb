@@ -44,11 +44,11 @@ import MacOsWindow from '../MacOsWindow.vue';
 import Article from '../Article.vue';
 
 export default {
+  name: 'TFAuthenticator',
   components: {
     MacOsWindow,
     Article,
   },
-  name: 'TFAuthenticator',
   data() {
     return {
       screenshots: {

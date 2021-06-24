@@ -1,15 +1,19 @@
 <template>
-  <Article title='SteamMultiAccount' year='2015'>
+  <Article title="SteamMultiAccount" year="2015">
     <p class="col-md-10">
       In 2015 i have beautiful business plan of getting money from steam card system.
       <br>
       <br>How steam card system work:
       <ul>
-      <li>In certain games you get cards every few hours after 3 hours of playing.</li>
-      <li>This cards can be sold in steam community market
-        (other people can earn experience for steam profile by collecting them)</li>
-      <li>In time of steam sales there is many games with such low price,
-        so cards from them can worth more.</li>
+        <li> In certain games you get cards every few hours after 3 hours of playing.</li>
+        <li>
+          This cards can be sold in steam community market
+          (other people can earn experience for steam profile by collecting them)
+        </li>
+        <li>
+          In time of steam sales there is many games with such low price,
+          so cards from them can worth more.
+        </li>
       </ul>
       So, it's basicly a complex and low value investment, but back in the days i was
       a high school student with no money, so it's was pretty much for me to buy
@@ -33,10 +37,10 @@
     </p>
     <MacOsWindow title="SteamMultiAccount">
       <img
-          src='../../assets/steammultiaccount_first.png'
-          alt="SteamMultiAccount"
-          class="padding"
-        >
+        src='../../assets/steammultiaccount_first.png'
+        alt="SteamMultiAccount"
+        class="padding"
+      >
     </MacOsWindow>
     <p class="col-md-10">
       Available features:
@@ -66,11 +70,11 @@ import MacOsWindow from '../MacOsWindow.vue';
 import Article from '../Article.vue';
 
 export default {
+  name: 'SteamMultiAccount',
   components: {
     MacOsWindow,
     Article,
   },
-  name: 'SteamMultiAccount',
 };
 </script>
 

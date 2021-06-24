@@ -1,9 +1,9 @@
 // TODO: rewrite slider
 
 <template>
-  <Article title='SZOHack' year='2012'>
+  <Article title="SZOHack" year="2012">
     <p class="col-md-10">
-      Back in 2012 i've been playing with cheat&nbsp;engine,
+      Back in 2012, when i was 15, i've been playing with cheat&nbsp;engine,
       scrolling through some cheat forum, and occasionally
       find article describing process of making auto-injected
       cheat through replacing d3d9.dll, with source code
@@ -81,7 +81,8 @@
           encrypted-media;
           gyroscope;
           picture-in-picture"
-          allowfullscreen/>
+          allowfullscreen
+        />
       </MacOsWindow>
     </div>
   </Article>

@@ -6,7 +6,7 @@
       to cover the receipt out of background, fixing skew, and detecting text
       via Tesseract engine.
     </p>
-    <img src="../../assets/receipts.png" alt="">
+    <img src="../../assets/receipts.png" alt="algorithm scheme">
     <p class="col-md-10">
       To find and crop receipt on image was used morphology operators,
       after that algorithm applies some denoising and illumination normalization
