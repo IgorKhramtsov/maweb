@@ -30,7 +30,7 @@
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
             <div ref="container" class="frame">
-              <ReceiptRecognition />
+              <ECommerce />
             </div>
           </div>
         </div>
@@ -47,10 +47,11 @@ import StarboundClone from './Articles/StarboundClone.vue';
 import SteamMultiAccount from './Articles/SteamMultiAccount.vue';
 import TFAuthenticator from './Articles/TFAuthenticator.vue';
 import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
+import ECommerce from './Articles/ECommerce.vue';
 
 export default {
   name: 'Portfolio',
-  components: { ReceiptRecognition },
+  components: { ECommerce },
   data() {
     return {
       selectedProject: null,
@@ -87,9 +88,9 @@ export default {
         href: ReceiptRecognition,
       }, {
         name: 'Simple e-commerce website',
-        tags: ['vue', 'php'],
+        tags: ['vue', 'php', 'laravel'],
         year: 2018,
-        href: '#',
+        href: ECommerce,
       }, {
         name: 'Compiler',
         tags: ['C++'],
