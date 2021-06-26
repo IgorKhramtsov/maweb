@@ -15,7 +15,7 @@
             <div v-for="project in item.projects" :key="project.name" class="projects">
               <span
                 :class="`pointer selectable-text ${project == selectedProject ? 'active' : ''}`"
-                @click="setProject(project)"
+                @click="setProject(projects.indexOf(project))"
               >
                 {{ project.name }}
               </span>
@@ -29,9 +29,7 @@
         </div>
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
-            <div ref="container" class="frame">
-              <ECommerce />
-            </div>
+            <div ref="container" class="frame" />
           </div>
         </div>
       </div>
@@ -51,10 +49,10 @@ import ECommerce from './Articles/ECommerce.vue';
 
 export default {
   name: 'Portfolio',
-  components: { ECommerce },
+  components: { },
   data() {
     return {
-      selectedProject: null,
+      selectedProjectIndex: 0,
       scroll: 0,
       projects: [{
         name: 'SZOHack',
@@ -68,7 +66,7 @@ export default {
         href: SZOHackLauncher,
       }, {
         name: 'Starbound clone draft',
-        tags: ['C#', 'Unity', 'gamedev'],
+        tags: ['C#', 'unity', 'gamedev'],
         year: 2014,
         href: StarboundClone,
       }, {
@@ -118,13 +116,16 @@ export default {
         href: '#',
       }, {
         name: 'SingularityApp',
-        tags: ['flutter'],
+        tags: ['flutter', 'android', 'ios', 'grpc', 'firebase', 'sqlite', 'protobuf'],
         year: 'currently',
         href: '#',
       }],
     };
   },
   computed: {
+    selectedProject() {
+      return this.projects[this.selectedProjectIndex];
+    },
     timeline() {
       const projectsByYear = {};
       const timeline = [];
@@ -152,14 +153,15 @@ export default {
   },
   mounted() {
     document.addEventListener('scroll', this.handleScroll);
+    this.setProject(this.selectedProjectIndex);
   },
   unmounted() {
     document.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    setProject(project) {
-      this.selectedProject = project;
-      const ComponentClass = Vue.extend(project.href);
+    setProject(index) {
+      this.selectedProjectIndex = index;
+      const ComponentClass = Vue.extend(this.selectedProject.href);
       const instance = new ComponentClass();
       instance.$mount();
       const node = this.$refs.container;
