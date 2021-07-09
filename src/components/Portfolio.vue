@@ -46,6 +46,7 @@ import SteamMultiAccount from './Articles/SteamMultiAccount.vue';
 import TFAuthenticator from './Articles/TFAuthenticator.vue';
 import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
 import ECommerce from './Articles/ECommerce.vue';
+import Interpreter from './Articles/Interpreter.vue';
 
 export default {
   name: 'Portfolio',
@@ -90,10 +91,10 @@ export default {
         year: 2018,
         href: ECommerce,
       }, {
-        name: 'Compiler',
+        name: 'Simple interpreter',
         tags: ['C++'],
         year: 2019,
-        href: '#',
+        href: Interpreter,
       }, {
         name: 'Beholder library',
         tags: ['C#', 'Java', 'gamedev'],

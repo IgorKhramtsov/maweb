@@ -75,12 +75,6 @@ export default {
   width: auto;
   margin-top: 2em;
 }
-ul {
-  margin-top: 1em;
-  li {
-    margin-top: 0.5em;
-  }
-}
 a {
   font-weight: normal;
 }

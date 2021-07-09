@@ -1,12 +1,11 @@
 <template>
   <div class="row text justify-content-center">
     <div class="header">
-      <span class="title">{{title}}</span>
-      <span class="year">{{year}}</span>
+      <span class="title">{{ title }}</span>
+      <span class="year">{{ year }}</span>
     </div>
 
-    <slot/>
-
+    <slot />
   </div>
 </template>
 
@@ -47,6 +46,12 @@ p {
     position: absolute;
     top: -7px;
     margin-left: 5px;
+  }
+}
+ul {
+  margin-top: 1em;
+  li {
+    margin-top: 0.5em;
   }
 }
 </style>
