@@ -47,6 +47,7 @@ import TFAuthenticator from './Articles/TFAuthenticator.vue';
 import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
 import ECommerce from './Articles/ECommerce.vue';
 import Interpreter from './Articles/Interpreter.vue';
+import BeholderPlugin from './Articles/BeholderPlugin.vue';
 
 export default {
   name: 'Portfolio',
@@ -96,10 +97,10 @@ export default {
         year: 2019,
         href: Interpreter,
       }, {
-        name: 'Beholder library',
+        name: 'Beholder android plugin',
         tags: ['C#', 'Java', 'gamedev'],
         year: 2019,
-        href: '#',
+        href: BeholderPlugin,
       }, {
         name: 'DeEsser',
         tags: ['C++'],
