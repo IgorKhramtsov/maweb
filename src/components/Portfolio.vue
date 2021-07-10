@@ -48,6 +48,7 @@ import ReceiptRecognition from './Articles/ReceiptRecognition.vue';
 import ECommerce from './Articles/ECommerce.vue';
 import Interpreter from './Articles/Interpreter.vue';
 import BeholderPlugin from './Articles/BeholderPlugin.vue';
+import DeEsser from './Articles/DeEsser.vue';
 
 export default {
   name: 'Portfolio',
@@ -105,7 +106,7 @@ export default {
         name: 'DeEsser',
         tags: ['C++'],
         year: 2020,
-        href: '#',
+        href: DeEsser,
       }, {
         name: 'PhysMin',
         tags: ['typescript', 'react', 'firebase', 'android', 'kotlin'],
