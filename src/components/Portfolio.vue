@@ -49,6 +49,7 @@ import ECommerce from './Articles/ECommerce.vue';
 import Interpreter from './Articles/Interpreter.vue';
 import BeholderPlugin from './Articles/BeholderPlugin.vue';
 import DeEsser from './Articles/DeEsser.vue';
+import PhysMin from './Articles/PhysMin.vue';
 
 export default {
   name: 'Portfolio',
@@ -111,7 +112,7 @@ export default {
         name: 'PhysMin',
         tags: ['typescript', 'react', 'firebase', 'android', 'kotlin'],
         year: 2020,
-        href: '#',
+        href: PhysMin,
       }, {
         name: 'Arkanoid',
         tags: ['C++', 'gamedev', 'opengl'],
