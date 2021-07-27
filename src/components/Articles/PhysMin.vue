@@ -38,7 +38,7 @@
     </div>
     <p class="col-md-10">
       To make easier process of creating test sequences for each subject, service website
-      was created with react and bootstrap on firebase hosting. This site is operate with
+      was created with react and Material UI on firebase hosting. This site is operate with
       firestore database, for building configs, based on which the tests will be built on
       user request.
     </p>
