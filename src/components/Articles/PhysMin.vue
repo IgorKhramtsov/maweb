@@ -23,18 +23,21 @@
       on top of screen, to tell is this answer is correct or not. Figma was used for designing UI.
     </p>
     <div class="col-md-10">
-      <MacOsWindow title="Laravel version">
+      <MacOsWindow title="Service website">
         <video
           src="../../assets/physmin-web.webm"
-          alt="Website preview gif"
+          alt="Service website functionality preview"
           class="gif"
           autoplay="true"
           loop="true"
-        />
+        >
+          <source ref="../../assets/physmin-web.webm">
+          <source ref="../../assets/physmin-web.mov">
+        </video>
       </MacOsWindow>
     </div>
     <p class="col-md-10">
-      To make easier process of creating test sequences for each subject, internal website
+      To make easier process of creating test sequences for each subject, service website
       was created with react and bootstrap on firebase hosting. This site is operate with
       firestore database, for building configs, based on which the tests will be built on
       user request.
@@ -63,6 +66,6 @@ export default {
 }
 .gif {
   width: 100%;
-  margin-bottom: -1px;
+  margin-bottom: -6px;
 }
 </style>
