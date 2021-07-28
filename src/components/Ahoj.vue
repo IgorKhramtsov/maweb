@@ -3,7 +3,7 @@
     <div class="hello container">
       <span>hi 👋</span>
       <span>my name is Igor</span>
-      <span class="small">i am a software developer</span>
+      <span class="small">i am a software engineer</span>
       <span class="smallest">based in barnaul, russia</span>
       <img class="moloko" src="../assets/milk.png" alt="milk">
     </div>
