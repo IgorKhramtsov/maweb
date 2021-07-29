@@ -50,6 +50,7 @@ import Interpreter from './Articles/Interpreter.vue';
 import BeholderPlugin from './Articles/BeholderPlugin.vue';
 import DeEsser from './Articles/DeEsser.vue';
 import PhysMin from './Articles/PhysMin.vue';
+import Arkanoid from './Articles/Arkanoid.vue';
 
 export default {
   name: 'Portfolio',
@@ -117,7 +118,7 @@ export default {
         name: 'Arkanoid',
         tags: ['C++', 'gamedev', 'opengl'],
         year: 2020,
-        href: '#',
+        href: Arkanoid,
       }, {
         name: 'SingularityApp',
         tags: ['flutter', 'android', 'ios', 'grpc', 'firebase', 'sqlite', 'protobuf'],
