@@ -51,6 +51,7 @@ import BeholderPlugin from './Articles/BeholderPlugin.vue';
 import DeEsser from './Articles/DeEsser.vue';
 import PhysMin from './Articles/PhysMin.vue';
 import Arkanoid from './Articles/Arkanoid.vue';
+import SingularityApp from './Articles/Singularity.vue';
 
 export default {
   name: 'Portfolio',
@@ -123,7 +124,7 @@ export default {
         name: 'SingularityApp',
         tags: ['flutter', 'android', 'ios', 'grpc', 'firebase', 'sqlite', 'protobuf'],
         year: 'currently',
-        href: '#',
+        href: SingularityApp,
       }],
     };
   },
