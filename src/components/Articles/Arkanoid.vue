@@ -2,18 +2,23 @@
   <Article title="Arkanoid" year="2020">
     <p class="col-md-10">
       Test assignment for Zefir Games. The task was to made simple clone of
-      Arkanoid (breakout) game, on C++ and pure OpenGL. On that moment, i have
+      Arkanoid (breakout) game, on C++ and pure OpenGL. On that moment, i had
       pretty weak knowledge of OpenGL, but with help of videos from
-      Cherno youtube channel on OpenGL, i've successfully made a playable
+      <a href="https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2" target="_blank"> Cherno youtube channel on OpenGL</a>, i've successfully created a playable
       version after 4 days of developing.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Arkanoid">
-        <img
-          src="../../assets/arkanoid.gif"
+        <video
+          src="../../assets/arkanoid.webm"
           alt="Gameplay"
           class="gif"
+          autoplay="true"
+          loop="true"
         >
+          <source ref="../../assets/arkanoid.webm">
+          <source ref="../../assets/arkanoid.mov">
+        </video>
       </MacOsWindow>
     </div>
   </Article>
@@ -35,6 +40,9 @@ export default {
 <style lang="scss" scoped>
 .gif {
   width: 100%;
-  margin-bottom: -1px;
+  margin-bottom: -6px;
+}
+a {
+  font-weight: 300;
 }
 </style>
