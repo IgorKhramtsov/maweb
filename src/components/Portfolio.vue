@@ -176,6 +176,7 @@ export default {
       } else {
         node.appendChild(instance.$el);
       }
+      node.scrollIntoView();
     },
     handleScroll() {
       const { scrollY } = window;
@@ -200,7 +201,7 @@ section {
   }
 }
 .timeline {
-  margin-top: 10px;
+  margin-top: 50px;
   font-weight: 200;
   font-size: 23px;
   line-height: 1.2em;

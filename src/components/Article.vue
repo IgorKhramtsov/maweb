@@ -61,6 +61,7 @@ export default {
 @import '../scss/vars.scss';
 .article {
   position: relative;
+  padding-top: 40px;
 }
 p {
   margin-top: 2em;
@@ -98,7 +99,7 @@ ul {
 
 .buttons-array {
   position: absolute;
-  top: 70px;
+  top: 110px;
   right: 5px;
 }
 .github-button {
