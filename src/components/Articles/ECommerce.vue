@@ -1,5 +1,13 @@
 <template>
-  <Article title="Simple e-commerce website" year="2018">
+  <Article title="Simple e-commerce website" year="2018"
+           :repos="[{
+             text: 'mvc pattern',
+             href: 'http://github.com/IgorKhramtsov/mvc-pattern'
+           },{
+             text: 'laravel',
+             href: 'http://github.com/IgorKhramtsov/laravel-e-commerce'
+           }]"
+  >
     <p class="col-md-10">
       On an internship at web-studio Sibirix, i already have pretty solid
       knowledge of frontend and backend for intern, so all tasks was pretty easy

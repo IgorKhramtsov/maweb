@@ -1,5 +1,5 @@
 <template>
-  <Article title="Receipt recognition algorithm" year="2018">
+  <Article title="Receipt recognition algorithm" year="2018" repoUrl="http://github.com/IgorKhramtsov/receipt-recognition">
     <p class="col-md-10">
       On an internship at IntegraSources, i have implemented a receipt recognition algorithm
       on C++ via OpenCV. The algorithm was able to improve shadow/lights on image, crop it

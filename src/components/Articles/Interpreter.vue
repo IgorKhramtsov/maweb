@@ -1,5 +1,5 @@
 <template>
-  <Article title="Simple interpreter" year="2019">
+  <Article title="Simple interpreter" year="2019" repoUrl="http://github.com/IgorKhramtsov/interpreter">
     <p class="col-md-10">
       In university at end of "Linguistic analysis" discipline i have developed a simple
       interpreter of C-like language. First of all, were designed diagrams for lexical and

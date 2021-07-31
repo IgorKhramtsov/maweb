@@ -1,5 +1,5 @@
 <template>
-  <Article title="SteamMultiAccount" year="2015">
+  <Article title="SteamMultiAccount" year="2015" repoUrl="http://github.com/IgorKhramtsov/SteamMultiAccount">
     <p class="col-md-10">
       In 2015 i have beautiful business plan of getting money from steam card system.
       <br>

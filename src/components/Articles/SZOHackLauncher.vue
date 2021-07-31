@@ -1,5 +1,5 @@
 <template>
-  <Article title="SZOHack launcher" year="2013">
+  <Article title="SZOHack launcher" year="2013" repoUrl="http://github.com/IgorKhramtsov/SZOH-Launcher">
     <p class="col-md-10">
       For selling cheat, i've made, i had to create launcher
       for managing updates, securing linking method, by verifying

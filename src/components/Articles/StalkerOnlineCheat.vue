@@ -1,7 +1,14 @@
 // TODO: rewrite slider
 
 <template>
-  <Article title="SZOHack" year="2012">
+  <Article title="SZOHack" year="2012"
+           :repos="[{
+             text: 'second version',
+             href: 'http://github.com/IgorKhramtsov/SZOHack-v2'
+           },{
+             text: 'third version',
+             href: 'http://github.com/IgorKhramtsov/SZOHack-v3'
+           }]">
     <p class="col-md-10">
       Back in 2012, when i was 15, i've been playing with cheat&nbsp;engine,
       scrolling through some cheat forum, and occasionally

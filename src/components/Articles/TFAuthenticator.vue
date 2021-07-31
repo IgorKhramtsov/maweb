@@ -1,5 +1,5 @@
 <template>
-  <Article title='2FAuthenticator' year='2016'>
+  <Article title='2FAuthenticator' year='2016' repoUrl="http://github.com/IgorKhramtsov/Steam2FAuthenticator">
     <p class="col-md-10">
       While i was a poor high school student, i didn't have good phone, but i needed a way
       to use Steam two factor authentication. So i make some research, didn't find anything

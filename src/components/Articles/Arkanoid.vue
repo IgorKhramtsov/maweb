@@ -1,5 +1,5 @@
 <template>
-  <Article title="Arkanoid" year="2020">
+  <Article title="Arkanoid" year="2020" repoUrl="http://github.com/IgorKhramtsov/Arkanoid">
     <p class="col-md-10">
       Test assignment for Zefir Games. The task was to made simple clone of
       Arkanoid (breakout) game, on C++ and pure OpenGL. On that moment, i had

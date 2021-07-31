@@ -1,5 +1,15 @@
 <template>
-  <Article title="PhysMin" year="2020">
+  <Article title="PhysMin" year="2020"
+           :repos="[{
+             text: 'android physmin',
+             href: 'http://github.com/IgorKhramtsov/physmin-android'
+           },{
+             text: 'serverless physmin',
+             href: 'http://github.com/IgorKhramtsov/physmin-functions'
+           },{
+             text: 'service website physmin',
+             href: 'http://github.com/IgorKhramtsov/physmin-web'
+           }]">
     <p class="col-md-10">
       My bachelor project, i've made with my group mate. Idea of app was inspired by Duolingo,
       with predominance of practice above the theory. Our physics professor gave

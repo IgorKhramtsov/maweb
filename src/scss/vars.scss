@@ -22,3 +22,8 @@ $can-you-feel-the-love-tonight-start-darker: #324ead;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+@mixin disable-text-gradient {
+    background-clip: none;
+    background: none;
+    -webkit-text-fill-color: initial;
+}

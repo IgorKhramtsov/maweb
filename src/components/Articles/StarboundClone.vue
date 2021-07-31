@@ -1,5 +1,5 @@
 <template>
-  <Article title="Starbound clone draft" year="2014">
+  <Article title="Starbound clone draft" year="2014" repoUrl="http://github.com/IgorKhramtsov/starbound-clone-draft">
     <p class="col-md-10">
       In summer holidays i was playing with Unity and start creating of
       Starbound clone (because it has interesting mechanics, i like to learn, and

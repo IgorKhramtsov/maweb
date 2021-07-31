@@ -1,5 +1,5 @@
 <template>
-  <Article title="DeEsser" year="2020">
+  <Article title="DeEsser" year="2020" repoUrl="http://github.com/IgorKhramtsov/DeEsser">
     <p class="col-md-10">
       Bachelor's audio processing project to get rid of excessive prominence of sibilant consonants.
       While recording sound from cheap recorder, like smartphone, resulting audio often contains
