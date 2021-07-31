@@ -58,5 +58,6 @@ export default {
   margin: auto;
   display: block;
   max-height: 600px;
+  border-radius: 45px;
 }
 </style>
