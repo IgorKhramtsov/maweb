@@ -121,7 +121,7 @@ export default {
 }
 
 // disable macos circle on small screens
-@media(max-width: 400px) { // euristic number
+@media(max-width: 470px) { // euristic number (based on last video in SZOHack)
   .macoswindow {
     .header {
       min-height: 35px;
