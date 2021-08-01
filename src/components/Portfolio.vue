@@ -167,10 +167,10 @@ export default {
     },
   },
   mounted() {
-    document.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('scroll', this.handleScroll, { passive: true });
     document.addEventListener('resize', () => {
       this.mobile = window.innerWidth <= 767;
-    });
+    }, { passive: true });
     this.setProject(this.selectedProjectIndex, true);
   },
   unmounted() {

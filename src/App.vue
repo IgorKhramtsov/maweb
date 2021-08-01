@@ -62,7 +62,7 @@ export default {
     };
   },
   mounted() {
-    document.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('scroll', this.handleScroll, { passive: true });
   },
   unmounted() {
     document.removeEventListener('scroll', this.handleScroll);
