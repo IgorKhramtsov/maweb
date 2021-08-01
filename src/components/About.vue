@@ -115,7 +115,7 @@ export default {
       &::before {
         content: '';
         position: absolute;
-        bottom: -2px;
+        top: 1.4em;
         left: -4px;
         display: block;
         width: 19px;
@@ -132,5 +132,28 @@ img {
   top: 610px;
   right: -200px;
   transition: transform .4s ease;
+}
+
+@media(max-width: 767px) {
+  .container {
+    padding: 0 15 px;
+    ul>li {
+      letter-spacing: 0.1em;
+    }
+    .about {
+      font-size: 20px;
+    }
+  }
+}
+
+@media(max-height: 780px) {
+  .container {
+    height: auto;
+    margin-top: 80px;
+  }
+  .experience>ul>li {
+      margin-top: 0.7em;
+      line-height: 1.5em;
+  }
 }
 </style>

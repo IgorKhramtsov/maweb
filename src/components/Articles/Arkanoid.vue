@@ -4,21 +4,20 @@
       Test assignment for Zefir Games. The task was to made simple clone of
       Arkanoid (breakout) game, on C++ and pure OpenGL. On that moment, i had
       pretty weak knowledge of OpenGL, but with help of videos from
-      <a href="https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2" target="_blank"> Cherno youtube channel on OpenGL</a>, i've successfully created a playable
+      <a class="safarifix" href="https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2" target="_blank"> Cherno youtube channel</a> on OpenGL, i've successfully created a playable
       version after 4 days of developing.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Arkanoid">
         <video
-          src="../../assets/arkanoid.webm"
+          src="../../assets/arkanoid.mp4"
           alt="Gameplay"
           class="gif"
           autoplay="true"
           loop="true"
-        >
-          <source ref="../../assets/arkanoid.webm">
-          <source ref="../../assets/arkanoid.mov">
-        </video>
+          playsinline="true"
+          type="video/mp4"
+        />
       </MacOsWindow>
     </div>
   </Article>
@@ -44,5 +43,8 @@ export default {
 }
 a {
   font-weight: 300;
+  &.safarifix {
+    display: inline-block;
+  }
 }
 </style>

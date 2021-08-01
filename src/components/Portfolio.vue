@@ -12,24 +12,30 @@
             <span :class="`year selectable-text ${item.year == selectedYear ? 'active' : ''}`">
               {{ item.year }}
             </span>
-            <div v-for="project in item.projects" :key="project.name" class="projects">
+            <div
+              v-for="project in item.projects"
+              :key="project.name"
+              :ref="`project-${project.name}`"
+              :class="`project ${project == selectedProject ? 'active' : ''}`"
+            >
               <span
                 :class="`pointer selectable-text ${project == selectedProject ? 'active' : ''}`"
                 @click="setProject(projects.indexOf(project))"
               >
                 {{ project.name }}
               </span>
-              <ul :class="`tags list-inline ${project == selectedProject ? 'active' : ''}`">
+              <ul :class="`tags list-inline`">
                 <li v-for="tag in project.tags" :key="tag">
                   {{ tag }}
                 </li>
               </ul>
+              <div class="frame mobile" :ref="`containermob-${project.name}`" />
             </div>
           </div>
         </div>
         <div :class="'col-md project-info'/* + (selectedProject == null ? 'invisible' : '')*/">
           <div class="row frame-wrapper">
-            <div ref="container" class="frame" />
+            <div ref="containerdesk" class="frame desktop" />
           </div>
         </div>
       </div>
@@ -60,6 +66,9 @@ export default {
     return {
       selectedProjectIndex: 0,
       scroll: 0,
+      mobile: window.innerWidth <= 767,
+      safari: (navigator.userAgent.toLowerCase().indexOf('safari') !== -1)
+              && (navigator.userAgent.toLowerCase().indexOf('chrome') === -1),
       projects: [{
         name: 'SZOHack',
         tags: ['C++', 'gamedev'],
@@ -76,12 +85,12 @@ export default {
         year: 2014,
         href: StarboundClone,
       }, {
-        name: 'SteamMultiAccount',
+        name: 'Steam MultiAccount',
         tags: ['C#'],
         year: 2015,
         href: SteamMultiAccount,
       }, {
-        name: 'Steam2FAuthenticator',
+        name: 'Steam two factor authenticator',
         tags: ['C#'],
         year: 2016,
         href: TFAuthenticator,
@@ -159,6 +168,9 @@ export default {
   },
   mounted() {
     document.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('resize', () => {
+      this.mobile = window.innerWidth <= 767;
+    });
     this.setProject(this.selectedProjectIndex);
   },
   unmounted() {
@@ -168,20 +180,62 @@ export default {
     setProject(index) {
       this.selectedProjectIndex = index;
       const ComponentClass = Vue.extend(this.selectedProject.href);
-      const instance = new ComponentClass();
-      instance.$mount();
-      const node = this.$refs.container;
-      if (node.hasChildNodes()) {
-        node.replaceChild(instance.$el, node.firstChild);
+      const nodedesk = this.$refs.containerdesk;
+      const nodemob = this.$refs[`containermob-${this.selectedProject.name}`][0];
+      const projectmob = this.$refs[`project-${this.selectedProject.name}`][0];
+      [nodemob, nodedesk].forEach((node) => {
+        const instance = new ComponentClass();
+        instance.$mount();
+        if (node.hasChildNodes()) {
+          node.replaceChild(instance.$el, node.firstChild);
+        } else {
+          node.appendChild(instance.$el);
+        }
+      });
+      if (this.mobile) {
+        setTimeout(() => { this.scrollToView(projectmob); });
       } else {
-        node.appendChild(instance.$el);
+        this.scrollToView(nodedesk);
       }
-      node.scrollIntoView();
+    },
+    scrollToView(view) {
+      if (this.safari) {
+        this.scrollToSmoothly(view, 300);
+      } else {
+        view.scrollIntoView();
+      }
     },
     handleScroll() {
       const { scrollY } = window;
       const height = document.body.offsetHeight;
       this.scroll = ((height - scrollY) / (height * 1.0)) * 200;
+    },
+    scrollToSmoothly(e, _time) {
+      let time = _time;
+      let pos = e.getBoundingClientRect().top + window.scrollY;
+      const currentPos = window.pageYOffset;
+      let start = null;
+      if (time == null) {
+        time = 500;
+      }
+      pos = +pos;
+      time = +time;
+      window.requestAnimationFrame(function step(currentTime) {
+        start = !start ? currentTime : start;
+        const progress = currentTime - start;
+        if (currentPos < pos) {
+          // eslint-disable-next-line no-mixed-operators
+          window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+        } else {
+          // eslint-disable-next-line no-mixed-operators
+          window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+        }
+        if (progress < time) {
+          window.requestAnimationFrame(step);
+        } else {
+          window.scrollTo(0, pos);
+        }
+      });
     },
   },
 };
@@ -245,12 +299,12 @@ section {
       border-radius: 3px;
     }
   }
-  .projects {
+  .project {
+    &.active>.tags>li{
+      background-color: $can-you-feel-the-love-tonight-start-darker;
+      color: #cccccc;
+    }
     .tags {
-      &.active>li{
-        background-color: $can-you-feel-the-love-tonight-start-darker;
-        color: #cccccc;
-      }
       li {
         transition: color background-color .15s ease;
         background-color: $disabled-item;
@@ -262,6 +316,12 @@ section {
         margin-right: 4px;
         margin-bottom: 4px;
       }
+    }
+    &.active .mobile{
+      display: block;
+    }
+    .mobile {
+      display: none;
     }
   }
 }
@@ -295,5 +355,16 @@ section {
 }
 .pointer {
   cursor: pointer;
+}
+
+@media(min-width: 767px) {
+  .mobile {
+    display: none !important;
+  }
+}
+@media(max-width: 767px) {
+  .desktop {
+    display: none !important;
+  }
 }
 </style>

@@ -4,10 +4,10 @@
       <div class="circle" style="background-color: #fc5b57"/>
       <div class="circle" style="background-color: #e5bf3c"/>
       <div class="circle" style="background-color: #57c038"/>
-      <span class="title">{{title}}</span>
+      <span class="title">{{ title }}</span>
     </div>
     <div class="content">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
@@ -64,10 +64,12 @@ export default {
     border-top: none;
   }
   .header {
+    display: flex;
     position: relative;
     background-color: #292929;
     padding: 2px 0px;
     padding-left: 8px;
+    padding-bottom: 10px;
     border-radius: 8px 8px 0 0;
     border: 1.5px solid #666666;
     border-bottom: none;
@@ -90,6 +92,42 @@ export default {
       font-weight: normal;
       font-size: 18px;
       // top: 0;
+    }
+  }
+}
+
+// For tablets (where timeline and article in 1 row)
+@media(max-width: 990px) { // euristic number
+  .macoswindow {
+    img, iframe {
+      max-width: 490px; // euristic number
+    }
+  }
+}
+
+// For mobile (where timiline and artivle in 2 rows)
+@media(max-width: 530px) { // euristic number
+  .macoswindow {
+    img {
+      width: 100%;
+    }
+    iframe {
+      max-width: 100%;
+    }
+    .photoframe {
+      width: inherit;
+    }
+  }
+}
+
+// disable macos circle on small screens
+@media(max-width: 400px) { // euristic number
+  .macoswindow {
+    .header {
+      min-height: 35px;
+      .circle {
+        display: none;
+      }
     }
   }
 }

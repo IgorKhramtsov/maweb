@@ -8,15 +8,14 @@
     </p>
     <div class="col-md-10">
       <video
-        src="../../assets/singularity.webm"
+        src="../../assets/singularity.mp4"
         alt="Video of app"
         class="gif"
         autoplay="true"
         loop="true"
-      >
-        <source ref="../../assets/singularity.webm">
-        <source ref="../../assets/singularity.mov">
-      </video>
+        playsinline="true"
+        type="video/mp4"
+      />
     </div>
 
     <p class="col-md-10">

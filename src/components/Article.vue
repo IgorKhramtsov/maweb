@@ -1,34 +1,24 @@
 <template>
   <div class="row text justify-content-center article">
-    <div class="header" :style="{'margin-bottom': `${headerMargin}px`}">
+    <div class="header" :style="{'margin-bottom': `${headerMargin * 1.3}em`}">
       <span class="title">{{ title }}</span>
       <span class="year">{{ year }}</span>
-    </div>
-    <div v-if="repoUrl != null" class="buttons-array">
-      <a :href="repoUrl" target="_blank" class="github-button">
-        <span class="github-text">source code</span>
-        <img
-          src="../assets/icons/github.svg"
-          alt="source code"
-          class="github-icon"
+      <div class="buttons-array">
+        <a
+          v-for="repo in reposarray"
+          :key="repo.href"
+          :href="repo.href"
+          target="_blank"
+          class="github-button margin"
         >
-      </a>
-    </div>
-    <div v-else class="buttons-array">
-      <a
-        v-for="repo in repos"
-        :key="repo.href"
-        :href="repo.href"
-        target="_blank"
-        class="github-button margin"
-      >
-        <span class="github-text">{{ repo.text }}</span>
-        <img
-          src="../assets/icons/github.svg"
-          alt="source code"
-          class="github-icon"
-        >
-      </a>
+          <span class="github-text">{{ repo.text }}</span>
+          <img
+            src="../assets/icons/github.svg"
+            alt="source code"
+            class="github-icon"
+          >
+        </a>
+      </div>
     </div>
 
     <slot />
@@ -46,12 +36,22 @@ export default {
   },
   computed: {
     headerMargin() {
-      let margin = 40;
+      let margin = 1;
       if (this.repos != null) {
-        margin += (this.repos.length - 1) * 24;
+        margin += (this.repos.length - 1);
       }
 
       return margin;
+    },
+    // Accessor for repos (use repoUrl if only 1 repo)
+    reposarray() {
+      if (this.repos != null) {
+        return this.repos;
+      }
+      return [{
+        text: 'source code',
+        href: this.repoUrl,
+      }];
     },
   },
 };
@@ -67,7 +67,7 @@ p {
   margin-top: 2em;
 }
 .header {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   text-align: center;
   position: relative;
   &::after {
@@ -99,7 +99,7 @@ ul {
 
 .buttons-array {
   position: absolute;
-  top: 110px;
+  top: 75px;
   right: 5px;
 }
 .github-button {
@@ -121,6 +121,35 @@ ul {
   .github-icon {
     height: 24px;
     width: 24px;
+  }
+}
+
+// mobile (article inside of timeline)
+@media(max-width: 767px) {
+  .article {
+    padding-top: 0;
+    font-size: 19px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .header {
+    padding-bottom: 0px;
+    margin-bottom: 0px !important;
+      .title, .year {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+      .buttons-array {
+        position: relative;
+        top: 20px;
+        text-align: left;
+        a {
+          justify-content: space-between;
+          padding: 0 15px;
+        }
+      }
   }
 }
 </style>

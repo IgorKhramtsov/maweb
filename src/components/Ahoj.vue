@@ -41,6 +41,7 @@ export default {
     }
   }
 }
+
 .header {
   mask: url('../assets/toptop.svg');
   mask-repeat: no-repeat;
@@ -55,5 +56,12 @@ export default {
   top: 10px;
   right: 10px;
   height: 45px;
+}
+
+@media(max-height:780px) {
+  .header {
+    height: 80vh;
+    mask-size: auto 400px;
+  }
 }
 </style>

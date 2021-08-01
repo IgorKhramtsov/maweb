@@ -35,15 +35,14 @@
     <div class="col-md-10">
       <MacOsWindow title="Service website">
         <video
-          src="../../assets/physmin-web.webm"
+          src="../../assets/physmin-web.mp4"
           alt="Service website functionality preview"
           class="gif"
           autoplay="true"
           loop="true"
-        >
-          <source ref="../../assets/physmin-web.webm">
-          <source ref="../../assets/physmin-web.mov">
-        </video>
+          playsinline="true"
+          type="video/mp4"
+        />
       </MacOsWindow>
     </div>
     <p class="col-md-10">
@@ -77,5 +76,12 @@ export default {
 .gif {
   width: 100%;
   margin-bottom: -6px;
+}
+
+// For mobile (where timiline and artivle in 2 rows)
+@media(max-width: 530px) { // euristic number
+  .appgif {
+    width: 100%;
+  }
 }
 </style>
