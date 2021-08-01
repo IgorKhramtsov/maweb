@@ -171,13 +171,15 @@ export default {
     document.addEventListener('resize', () => {
       this.mobile = window.innerWidth <= 767;
     });
-    this.setProject(this.selectedProjectIndex);
+    this.setProject(this.selectedProjectIndex, true);
   },
   unmounted() {
     document.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    setProject(index) {
+    setProject(index, dontscroll) {
+      // eslint-disable-next-line no-param-reassign
+      dontscroll = dontscroll || false;
       this.selectedProjectIndex = index;
       const ComponentClass = Vue.extend(this.selectedProject.href);
       const nodedesk = this.$refs.containerdesk;
@@ -192,10 +194,12 @@ export default {
           node.appendChild(instance.$el);
         }
       });
-      if (this.mobile) {
-        setTimeout(() => { this.scrollToView(projectmob); });
-      } else {
-        this.scrollToView(nodedesk);
+      if (!dontscroll) {
+        if (this.mobile) {
+          setTimeout(() => { this.scrollToView(projectmob); });
+        } else {
+          this.scrollToView(nodedesk);
+        }
       }
     },
     scrollToView(view) {
