@@ -1,14 +1,14 @@
 <template>
   <Article title="SZOHack launcher" year="2013" repoUrl="http://github.com/IgorKhramtsov/SZOH-Launcher">
     <p class="col-md-10">
-      For selling cheat, i've made, i had to create launcher
-      for managing updates, securing linking method, by verifying
-      computer datetime and injecting it into the game
-      (from&nbsp;second version, cheat became not auto-injected,
-      because developers start checking d3d9.dll).
+      For selling cheat, I've made, I had to create launcher
+      for managing updates, securing linking method (by verifying
+      computer datetime) and injecting cheat into the game
+      (from&nbsp;second version, cheat became not auto-injectable,
+      because developers start checking d3d9.dll hashsum).
     </p>
     <p class="col-md-10">
-      So i create uCoz site for managing news and version
+      So, I create uCoz site for managing news and version
       updating, and develop WindowsForm app for everything else.
     </p>
     <div class="photoframe">

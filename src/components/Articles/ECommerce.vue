@@ -9,10 +9,10 @@
            }]"
   >
     <p class="col-md-10">
-      On an internship at web-studio Sibirix, i already have pretty solid
+      On an internship at web-studio Sibirix, I already have pretty solid
       knowledge of frontend and backend for intern, so all tasks was pretty easy
-      for me, but still i got some usefull advices and comments. I start from
-      implementing basic MVC pattern in php and js.
+      for me, but still i've got some usefull advices and comments. I start from
+      implementing basic MVC pattern in PHP and JS.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="MVC pattern version">
@@ -24,10 +24,10 @@
       </MacOsWindow>
     </div>
     <p class="col-md-10">
-      After that i finally make, that i wanted for a long time. Get my hands on Laravel,
+      After this task, I finally did, what i wanted for a long time. Get my hands on Laravel,
       and then on vue too with guidance of my mentor. I simply move all implemented features
       from custom MVC website, to Laravel, enchancing it, and exploring framework along the way.
-      Admin panel i decided to do by myself, to deeply understand, how they works inside.
+      Admin panel I decided to do by myself, to deeply understand, how they works inside.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Laravel version">
@@ -39,9 +39,9 @@
       </MacOsWindow>
     </div>
     <p class="col-md-10">
-      Resulting website have such features as review system with moderation, catalog with pagination
-      and sorting, order creation, payments wia walletone, managing products,
-      reviews and orders via admin panel.
+      Resulting website have such features like: review system with moderation;
+      catalog with pagination and sorting; order creation; payments via walletone;
+      managing products, reviews and orders from admin panel.
     </p>
   </Article>
 </template>

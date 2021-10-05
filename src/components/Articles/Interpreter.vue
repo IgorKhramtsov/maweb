@@ -1,10 +1,10 @@
 <template>
   <Article title="Simple interpreter" year="2019" repoUrl="http://github.com/IgorKhramtsov/interpreter">
     <p class="col-md-10">
-      In university at end of "Linguistic analysis" discipline i have developed a simple
+      In university, at end of "Linguistic analysis" discipline, I have developed a simple
       interpreter of C-like language. First of all, were designed diagrams for lexical and
       syntax parsers, semantic analyzer, and process of building semantic tree.
-      With all these diagrams i, then, start to implementing all of this in C++.
+      With all these diagrams I, start implementing all of this in C++.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Interpreter">
@@ -21,7 +21,7 @@
         <li> Types (int, bool, void for functions) </li>
         <li> Two-dimensional arrays (also int, bool) </li>
         <li> Functions with arguments (with overloading) </li>
-        <li> Scopes, If statements </li>
+        <li> Scopes, «if» statements </li>
         <li> Logical operators (&lt;, &gt;, &lt;=, &gt;=, ==, !=) </li>
         <li> Basic math operators (+, -, /, *, %) </li>
         <li> Assignment with math operator (+=, -=, etc) </li>

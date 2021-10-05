@@ -10,18 +10,18 @@
              href: 'http://github.com/IgorKhramtsov/SZOHack-v3'
            }]">
     <p class="col-md-10">
-      Back in 2012, when i was 15, i've been playing with cheat&nbsp;engine,
+      Back in 2012, when I was 15, I've been playing with Cheat&nbsp;Engine,
       scrolling through some cheat forum, and occasionally
-      find article describing process of making auto-injected
-      cheat through replacing d3d9.dll, with source code
+      find article describing process of making auto-injectable
+      cheat by replacing d3d9.dll, with source code
       attached. <br>
     </p>
     <p class="col-md-10">
-      From this moment i've spent some weeks trying
-      to undestarnd how to apply this to game i was play at
+      From that moment I spent some weeks trying
+      to undestarnd how to apply this to game I've been playing at
       those time, without any clue how programming work at all,
-      except knowledge about data structuring, i've get from playing
-      with cheat engine. <br>
+      except knowledge about data structuring, I've get from playing
+      with Cheat&nbsp;Engine. <br>
     </p>
     <div class="photoframe">
       <MacOsWindow title="second version of SZOHack">
@@ -39,14 +39,14 @@
       </div>
     </div>
     <p class="col-md-10">
-      And after a while, with help of some people from the same
-      forum, i have succesfully config, build and run my
-      frankestein-cheat, and start to enhancing it, with memhack functions.<br>
+      After a while, with help of some people from the same
+      forum, I've succesfully config, build and run my
+      frankestein-cheat, and start enhancing it, with memhack functions.<br>
     </p>
     <p class="col-md-10">
       I've should say thanks to developer team of this game,
-      because if they have any anti-cheat system at those time,
-      i've never been able to build this cheat, and find my passion
+      because if they have any anti-cheat system at that time,
+      I've never been able to build this cheat, and find my passion
       for programming. <br>
     </p>
     <div class="photoframe">
@@ -66,12 +66,12 @@
       </div>
     </div>
     <p class="col-md-10">
-      Back in the days i was naive little boy, and get offering
-      to sell my cheat through lets name it 'publisher'. Of course
-      i agree, and after dialog in skype sent them special version
-      of dll with changed author, and with disabled linking.
-      <!-- pretentious, rewrite --> From this and on, you can find some videos, posts and images
-      of people selling this first version of cheat. <!-- pretentious, rewrite -->
+      Back in the days, I was naive little boy, and got offer
+      to sell my cheat through... lets name it 'publisher'. Of course
+      I agree, and after dialog in Skype sent them special version
+      of dll with changed author, and without hardware linking.
+      Even today you can find some videos, posts and images
+      of people trying to sell this, first, version of cheat.
     </p>
     <div class="photoframe video">
       <MacOsWindow title="leaked first version of cheat">

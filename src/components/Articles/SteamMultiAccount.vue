@@ -1,21 +1,21 @@
 <template>
   <Article title="SteamMultiAccount" year="2015" repoUrl="http://github.com/IgorKhramtsov/SteamMultiAccount">
     <p class="col-md-10">
-      In 2015 i have beautiful business plan of getting money from steam card system.
+      In 2015 i have beautiful business plan of getting money from Steam card system.
       <br>
       <br>How steam card system work:
       <ul>
-        <li> In certain games you get cards every few hours after 3 hours of playing.</li>
+        <li> In certain games you get cards every few hours after 3 hours of playing it.</li>
         <li>
           This cards can be sold in steam community market
-          (other people can earn experience for steam profile by collecting them)
+          (other people can earn experience for Steam profile by collecting them)
         </li>
         <li>
           In time of steam sales there is many games with such low price,
           so cards from them can worth more.
         </li>
       </ul>
-      So, it's basicly a complex and low value investment, but back in the days i was
+      So, it's basicly a complex and low value investment, but back in the days, I was
       a high school student with no money, so it's was pretty much for me to buy
       beautiful, nasty, juicy, skins for my lovely SSG in CS:GO.
     </p>
@@ -31,9 +31,9 @@
       <img src="../../assets/snatch2.png" alt="My plan">
     </div>
     <p class="col-md-10">
-      But do it by my hands i didn't want, so i start searching for existing
+      But I dont want to do it by my hands, so I start searching for existing
       solutions, and find <a href="https://github.com/JustArchiNET/ArchiSteamFarm" target="_blank">one</a>, pretty good, but not good enough for me.
-      So, i start my own project from scratch guided by source code i found.
+      So, I start my own project from scratch guided by source code I found.
     </p>
     <MacOsWindow title="SteamMultiAccount">
       <img
@@ -47,7 +47,7 @@
       <ul>
         <li>Loging with two factor authentication</li>
         <li>Farming cards from multiple account simultaneously</li>
-        <li>Selling cards with median price from market</li>
+        <li>Selling cards with median price on market</li>
       </ul>
     </p>
     <p class="col-md-10">

@@ -1,11 +1,12 @@
 <template>
   <Article title="Starbound clone draft" year="2014" repoUrl="http://github.com/IgorKhramtsov/starbound-clone-draft">
     <p class="col-md-10">
-      In summer holidays i was playing with Unity and start creating of
-      Starbound clone (because it has interesting mechanics, i like to learn, and
-      i love playing it in those days). I implement block placing and desctruction,
+      At summer holidays, I was playing with Unity and begin to develop
+      Starbound clone (because it has interesting mechanics, which I want to examine
+      from the inside, and I love playing it in those days).
+      I implement block placing and desctruction,
       basic inventory system, map generation by Perlin noise and water simulation.
-      After that summer project was successfully abandoned.
+      After that summer, project was successfully abandoned.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Starbound clone draft">
@@ -17,8 +18,8 @@
       </MacOsWindow>
     </div>
     <p class="col-md-10">
-      Perfomance is poor, but it is realy raw development build,
-      and i didn't have so much experience in those time to make it right.
+      Perfomance is not the best, but it is realy raw development build,
+      and I didn't have so much experience in those time to make it right.
     </p>
   </Article>
 </template>

@@ -22,7 +22,7 @@
           <p>have experience with:</p>
           <ul>
             <li>C# windows form</li>
-            <li>gamedev (also hacking them)</li>
+            <li>gamedev (also hacking games)</li>
             <li>web development</li>
             <li>native and flutter mobile development</li>
             <li>backend development</li>

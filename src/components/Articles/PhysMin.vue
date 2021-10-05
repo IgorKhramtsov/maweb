@@ -11,12 +11,12 @@
              href: 'http://github.com/IgorKhramtsov/physmin-web'
            }]">
     <p class="col-md-10">
-      My bachelor project, i've made with my group mate. Idea of app was inspired by Duolingo,
+      My bachelor project, I've made with my group mate. Idea of app was inspired by Duolingo,
       with predominance of practice above the theory. Our physics professor gave
-      us theoretical materials, to built app upon of them. The main idea was in a large amount
-      of precedural generated task cases. So for this we create typescript "server" on firebase.
+      us theoretical materials, to built app upon of them. The main concept was in a large amount
+      of precedural generated task cases. So for this we create Typescript server on Firebase.
       To make sure, the generated tasks are correct (and this is very important in
-      such applications) unit-tests was written, and run on every push via gitlab CI.
+      such application) unit-tests were written, and executed on every push via GitLab CI.
     </p>
     <div class="col-md-10">
       <img
@@ -26,11 +26,12 @@
       >
     </div>
     <p class="col-md-10">
-      Android app is written on kotlin, contains some custom views and layouts.
-      Also had an lottie animation on end of test. To keep user data, firebase&nbsp;authentication
-      with firestore was used. On wrong answer, task is moved to end of queue, so user have
-      to complete all tests. For debug purpose i've implement simple helper which appear
-      on top of screen, to tell is this answer is correct or not. Figma was used for designing UI.
+      Android app is written on Kotlin, contains some custom views and layouts.
+      Also Lottie animation used on end of test. To keep user data, Firebase&nbsp;Authentication
+      with Firestore was used. On wrong answer, task moves to end of queue, so user have
+      to complete all tasks correct with infinite number of tries. For debug purpose I implement
+      simple helper which appear on top of the screen, to tell if this answer is correct or not.
+      Figma was used for UI designing.
     </p>
     <div class="col-md-10">
       <MacOsWindow title="Service website">
