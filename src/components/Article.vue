@@ -48,10 +48,13 @@ export default {
       if (this.repos != null) {
         return this.repos;
       }
-      return [{
-        text: 'source code',
-        href: this.repoUrl,
-      }];
+      if (this.repoUrl != null && this.repoUrl !== undefined) {
+        return [{
+          text: 'source code',
+          href: this.repoUrl,
+        }];
+      }
+      return [];
     },
   },
 };
