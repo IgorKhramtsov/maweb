@@ -58,6 +58,7 @@ import DeEsser from './Articles/DeEsser.vue';
 import PhysMin from './Articles/PhysMin.vue';
 import Arkanoid from './Articles/Arkanoid.vue';
 import SingularityApp from './Articles/Singularity.vue';
+import Devour from './Articles/Devour.vue';
 
 export default {
   name: 'Portfolio',
@@ -134,6 +135,11 @@ export default {
         tags: ['flutter', 'android', 'ios', 'grpc', 'firebase', 'sqlite', 'protobuf'],
         year: 'currently',
         href: SingularityApp,
+      }, {
+        name: 'Devour',
+        tags: ['flutter', 'android', 'ios'],
+        year: 'currently',
+        href: Devour,
       }],
     };
   },
