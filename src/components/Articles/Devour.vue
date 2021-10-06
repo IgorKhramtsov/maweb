@@ -1,5 +1,5 @@
 <template>
-  <Article title="Devour" year="2021-currently">
+  <Article title="Devour" year="2021-currently" repoUrl="http://github.com/IgorKhramtsov/devour">
     <p class="col-md-10">
       My pet project, app for viewing memes, inspired by TikTok, where you have
       minimum useless space, concetrated on video and main goal is engage user for
